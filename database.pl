@@ -99,7 +99,7 @@ wrstMed(Allele, illness, Med, pubId):- treats(Med, illness),NegativeConnected(Al
 
 PositiveConnected(rs4148740, amitriptyline).
 PositiveConnected(rs4148740, amitriptyline).
-
+XXXXXXXXXX
 
 treats(amitriptyline, Depression).
 
