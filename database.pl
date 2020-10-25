@@ -90,5 +90,18 @@ drug(zuclopenthixol).
 
 /******************************************************************************/
 #AHMED's WORKSPACE
+#Patient give their genes, their illness, we give them their best med.
+
+/*
+bestMed(Allele, illness, Med, pubId):- treats(Med, illness),PositiveConnected(Allele, Med, pubId).
+wrstMed(Allele, illness, Med, pubId):- treats(Med, illness),NegativeConnected(Allele, Med, pubId).
+*/
+
+PositiveConnected(rs4148740, amitriptyline).
+PositiveConnected(rs4148740, amitriptyline).
+
+
+treats(amitriptyline, Depression).
+
 
 /******************************************************************************/
