@@ -47,12 +47,12 @@ drug(zuclopenthixol).
 /************
 * ILLNESSES *
 ************/
-illness("depression").
-illness("depressive disorder").
-illness("mood disorder").
-illness("anxiety disorder").
-illness("obsessive-compulsive disorder").
-illness("schizophrenia").
+illness(depression).
+illness(depressive_disorder).
+illness(mood_disorder).
+illness(anxiety_disorder).
+illness(obsessive-compulsive_disorder).
+illness(schizophrenia).
 
 /******************************************************************************/
 /*CARSON's WORKSPACE*/
@@ -82,7 +82,7 @@ associated(rs3892097CC, venlafaxine, 16642541, decreased, "concentration in peop
 associated(rs3892097TT, venlafaxine, 16642541, increased, "concentration in people with Depressive Disorder vs rs3892097CC").
 associated(rs3892097CC, venlafaxine, 16642541, decreased, "concentration in people with Depressive Disorder vs rs3892097TT").
 
-associated(CYP2D6, venlafaxine, 24858822, decreased, "metabolism in CYP2D6 poor metabolizers").
+associated("CYP2D6", venlafaxine, 24858822, decreased, "metabolism in CYP2D6 poor metabolizers").
 
 associated(rs7787082A, venlafaxine, 18215618, increased, "remission in people with Depression vs rs7787082G").
 associated(rs7787082G, venlafaxine, 18215618, decreased, "remission in people with Depression vs rs7787082A").
@@ -125,7 +125,7 @@ associated(rs7905446TT, venlafaxine, 30874608, decreased, "response in people wi
 associated(rs7905446GG, venlafaxine, 30874608, increased, "response in people with Depression vs rs7905446TT").
 associated(rs7905446GT, venlafaxine, 30874608, increased, "response in people with Depression vs rs7905446TTT").
 
-associated(CYP2D6, venlafaxine, 24858822, decreased, "metabolism in elderly CYP2D6 normal metabolizers").
+associated("CYP2D6", venlafaxine, 24858822, decreased, "metabolism in elderly CYP2D6 normal metabolizers").
 
 associated(rs2032582A, venlafaxine, 21449676, increased, "risk of suicidal ideation in people with Depression vs rs2032582C").
 associated(rs2032582C, venlafaxine, 21449676, decreased, "risk of suicidal ideation in people with Depression vs rs2032582A").
@@ -140,7 +140,7 @@ associated(rs11983225T, venlafaxine, 18215618, decreased, "remission in people w
 associated("CYP2D6*4/*4", venlafaxine, 10774634, increased, "levels in people with Depressive Disorder vs CYP2D6*1/*1").
 associated("CYP2D6*1/*1", venlafaxine, 10774634, decreased, "levels in people with Depressive Disorder vs CYP2D6*4/*4").
 
-associated(CYP2D6, venlafaxine, 24858822, increased, "metabolism in elderly CYP2D6 heterozygous normal metabolizers").
+associated("CYP2D6", venlafaxine, 24858822, increased, "metabolism in elderly CYP2D6 heterozygous normal metabolizers").
 
 associated(rs10248420G, venlafaxine, 18215618, increased, "remission in people with Depression vs rs10248420A").
 associated(rs10248420A, venlafaxine, 18215618, decreased, "remission in people with Depression vs rs10248420G").
@@ -150,7 +150,7 @@ associated(rs5030655del, venlafaxine, 16958828, impaired, "metabolic activity in
 associated(rs2235040T, venlafaxine, 18215618, increased, "remission in people with Depressive Disorder vs rs2235040C").
 associated(rs2235040C, venlafaxine, 18215618, decreased, "remission in people with Depressive Disorder vs rs2235040T").
 
-associated(CYP2D6, venlafaxine, 12544511, decreased, "clearance in CYP2D6 normal metabolizers").
+associated("CYP2D6", venlafaxine, 12544511, decreased, "clearance in CYP2D6 normal metabolizers").
 
 associated(rs4680GG, venlafaxine, 23706899, increased, "response in people with Depressive Disorder vs rs4680AA and rs4680AG").
 associated(rs4680AA, venlafaxine, 23706899, decreased, "response in people with Depressive Disorder vs rs4680GG").
@@ -178,9 +178,9 @@ associated(rs3810651AA, venlafaxine, 23394390, increased, "response in people wi
 associated(rs3810651AT, venlafaxine, 23394390, increased, "response in people with Depressive Disorder vs rs3810651TT").
 associated(rs3810651TT, venlafaxine, 23394390, increased, "response in people with Depressive Disorder vs rs3810651AA and rs3810651AT").
 
-associated(rs25531TT, venlafaxine, 22907732, increased, reduction in HAM-A in people with Anxiety Disorders vs rs25531CC and rs25531CT).
-associated(rs25531CC, venlafaxine, 22907732, decreased, reduction in HAM-A in people with Anxiety Disorders vs rs25531TT).
-associated(rs25531CT, venlafaxine, 22907732, decreased, reduction in HAM-A in people with Anxiety Disorders vs rs25531TT).
+associated(rs25531TT, venlafaxine, 22907732, increased, "reduction in HAM-A in people with Anxiety Disorders vs rs25531CC and rs25531CT").
+associated(rs25531CC, venlafaxine, 22907732, decreased, "reduction in HAM-A in people with Anxiety Disorders vs rs25531TT").
+associated(rs25531CT, venlafaxine, 22907732, decreased, "reduction in HAM-A in people with Anxiety Disorders vs rs25531TT").
 
 associated(rs1487278C, venlafaxine, 18496129, increased, "response in people with Depression vs rs1487278TT").
 associated(rs1487278TT, venlafaxine, 18496129, decreased, "response in people with Depression vs rs1487278C").
@@ -222,11 +222,11 @@ associated("CYP2D6*4", venlafaxine, 8941025, increased, "drug toxicity in people
 associated("CYP2D6*5", venlafaxine, 8941025, increased, "drug toxicity in people with Depression").
 associated("CYP2D6*6", venlafaxine, 8941025, increased, "drug toxicity in people with Depression").
 
-associated("CYP2D6*4/*4", venlafaxine, 20174590, increased, levels in people with Obsessive-Compulsive Disorder vs CYP2D6*1/*1).
-associated("CYP2D6*1/*4", venlafaxine, 20174590, increased, levels in people with Obsessive-Compulsive Disorder vs CYP2D6*1/*1).
-associated("CYP2D6*1/*1", venlafaxine, 20174590, decreased, levels in people with Obsessive-Compulsive Disorder vs CYP2D6*4/*4 and CYP2D6*1/*4).
+associated("CYP2D6*4/*4", venlafaxine, 20174590, increased, "levels in people with Obsessive-Compulsive Disorder vs CYP2D6*1/*1").
+associated("CYP2D6*1/*4", venlafaxine, 20174590, increased, "levels in people with Obsessive-Compulsive Disorder vs CYP2D6*1/*1").
+associated("CYP2D6*1/*1", venlafaxine, 20174590, decreased, "levels in people with Obsessive-Compulsive Disorder vs CYP2D6*4/*4 and CYP2D6*1/*4").
 
-associated(CYP2D6, venlafaxine, 23545896, decreased, failed medication trails in CYP2D6 normal metabolizers with Obsessive-Compulsive Disorder).
+associated("CYP2D6", venlafaxine, 23545896, decreased, "failed medication trails in CYP2D6 normal metabolizers with Obsessive-Compulsive Disorder").
 
 associated("CYP2D6*3/*4", venlafaxine, 16044105, decreased, "metabolism vs CYP2D6*1/*1").
 associated("CYP2D6*4/*4", venlafaxine, 16044105, decreased, "metabolism vs CYP2D6*1/*1").
@@ -236,7 +236,7 @@ associated("CYP2D6*1/*1", venlafaxine, 16044105, increased, "metabolism vs CYP2D
 associated("CYP2D6*1xN", venlafaxine, 14652703, decreased, "response in people with Mood Disorders").
 associated("CYP2D6*2xN", venlafaxine, 14652703, decreased, "response in people with Mood Disorders").
 
-associated(CYP2D6, venlafaxine, 23545896, increased, side effects in CYP2D6 normal metabolizers with Obsessive-Compulsive Disorder).
+associated("CYP2D6", venlafaxine, 23545896, increased, "side effects in CYP2D6 normal metabolizers with Obsessive-Compulsive Disorder").
 
 associated(rs4713916A, venlafaxine, 20709156, increased, "response in people with Mood Disorders vs rs4713916G").
 associated(rs4713916G, venlafaxine, 20709156, decreased, "response in people with Mood Disorders vs rs4713916A").
@@ -249,7 +249,7 @@ associated("CYP2D6*1/*1", venlafaxine, 16958828, increased, "side effects in peo
 associated(rs2235067T, venlafaxine, 18215618, increased, "remission in people with Depression vs rs2235067C").
 associated(rs2235067C, venlafaxine, 18215618, decreased, "remission in people with Depression vs rs2235067T").
 
-associated(CYP2D6, venlafaxine, 24858822, decreased, "metabolism in elderly CYP2D6 poor metabolizers").
+associated("CYP2D6", venlafaxine, 24858822, decreased, "metabolism in elderly CYP2D6 poor metabolizers").
 
 associated(rs3800373C, venlafaxine, 20709156, increased, "response in people with Mood Disorders vs rs3800373A").
 associated(rs3800373A, venlafaxine, 20709156, decreased, "response in people with Mood Disorders vs rs3800373C").
@@ -258,9 +258,9 @@ associated(rs3800373A, venlafaxine, 20709156, decreased, "response in people wit
 /* NO SIGNIFICANT RESULTS */
 
 /*zuclopenthixol*/
-associated(CYP2D6*1, zuclopenthixol, 12197620, increased, "metabolism vs CYP2D6*3 and CYP2D6*4").
-associated(CYP2D6*3, zuclopenthixol, 12197620, decreased, "metabolism vs CYP2D6*1").
-associated(CYP2D6*4, zuclopenthixol, 12197620, decreased, "metabolism vs CYP2D6*1").
+associated("CYP2D6*1", zuclopenthixol, 12197620, increased, "metabolism vs CYP2D6*3 and CYP2D6*4").
+associated("CYP2D6*3", zuclopenthixol, 12197620, decreased, "metabolism vs CYP2D6*1").
+associated("CYP2D6*4", zuclopenthixol, 12197620, decreased, "metabolism vs CYP2D6*1").
 
 /******************************************************************************/
 
@@ -268,171 +268,169 @@ associated(CYP2D6*4, zuclopenthixol, 12197620, decreased, "metabolism vs CYP2D6*
 /* Patient give their genes, their illness, we give them their best med.*/
 
 /*
-bestMed(Allele, illness, Med, pubId):- treats(Med, illness),positivelyAssociated(Allele, Med, pubId).
-wrstMed(Allele, illness, Med, pubId):- treats(Med, illness),negativelyAssociated(Allele, Med, pubId).
-Associated(Allele, Med, pubId, IncDec, Param)..
+bestMed(Allele, illness, Med, pubId):- treats(Med, illness),positivelyassociated(Allele, Med, pubId).
+wrstMed(Allele, illness, Med, pubId):- treats(Med, illness),negativelyassociated(Allele, Med, pubId).
+associated(Allele, Med, pubId, IncDec, Param)..
 */
 
-Associated("CYP2C19*1/*2", Amitriptyline, 15590749, Increased, "concentration vs CYP2C19*1/*1").
-Associated("CYP2C19*2/*2", Amitriptyline, 15590749, Increased, "concentration vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 15590749, Decreased, "concentration vs CYP2C19*1/*2 & CYP2C19*2/*2").
+associated("CYP2C19*1/*2", amitriptyline, 15590749, increased, "concentration vs CYP2C19*1/*1").
+associated("CYP2C19*2/*2", amitriptyline, 15590749, increased, "concentration vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 15590749, decreased, "concentration vs CYP2C19*1/*2 & CYP2C19*2/*2").
 
-Associated("CYP2C19*1/*2", Amitriptyline, 15205367, Decreased, "metabolism vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 15205367, Increased, "metabolism vs CYP2C19*1/*2").
+associated("CYP2C19*1/*2", amitriptyline, 15205367, decreased, "metabolism vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 15205367, increased, "metabolism vs CYP2C19*1/*2").
 
-Associated("CYP2C19*2/*2", Amitriptyline, 12172336, Increased, "concentration vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 12172336, Decreased, "concentration vs CYP2C19*2/*2").
+associated("CYP2C19*2/*2", amitriptyline, 12172336, increased, "concentration vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 12172336, decreased, "concentration vs CYP2C19*2/*2").
 
-Associated("CYP2C19*2/*2", Amitriptyline, 28296334, Increased, "concentration vs CYP2C19*1/*1").
-Associated("CYP2C19*2/*3", Amitriptyline, 28296334, Increased, "concentration vs CYP2C19*1/*1").
-Associated("CYP2C19*3/*3", Amitriptyline, 28296334, Increased, "concentration vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 28296334, Decreased, "concentration vs CYP2C19*2/*2 & CYP2C19*2/*3 & CYP2C19*3/*3").
+associated("CYP2C19*2/*2", amitriptyline, 28296334, increased, "concentration vs CYP2C19*1/*1").
+associated("CYP2C19*2/*3", amitriptyline, 28296334, increased, "concentration vs CYP2C19*1/*1").
+associated("CYP2C19*3/*3", amitriptyline, 28296334, increased, "concentration vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 28296334, decreased, "concentration vs CYP2C19*2/*2 & CYP2C19*2/*3 & CYP2C19*3/*3").
 
-Associated(rs2235067T, Amitriptyline, 18215618, Increased, "Depression remission vs rs2235067C").
-Associated(rs2235067C, Amitriptyline, 18215618, Decreased, "Depression remission vs rs2235067T").
+associated(rs2235067T, amitriptyline, 18215618, increased, "Depression remission vs rs2235067C").
+associated(rs2235067C, amitriptyline, 18215618, decreased, "Depression remission vs rs2235067T").
 
-Associated("CYP2D6*1", Amitriptyline, 15205367, Decreased, "plasma nortriptyline vs CYP2D6*41").
-Associated("CYP2D6*41", Amitriptyline, 15205367, Increased, "plasma nortriptyline vs CYP2D6*1").
+associated("CYP2D6*1", amitriptyline, 15205367, decreased, "plasma nortriptyline vs CYP2D6*41").
+associated("CYP2D6*41", amitriptyline, 15205367, increased, "plasma nortriptyline vs CYP2D6*1").
 
-Associated("CYP2D6*1", Amitriptyline, 15205367, Decreased, "plasma nortriptyline vs CYP2D6*10").
-Associated("CYP2D6*10", Amitriptyline, 15205367, Increased, "plasma nortriptyline vs CYP2D6*1").
+associated("CYP2D6*1", amitriptyline, 15205367, decreased, "plasma nortriptyline vs CYP2D6*10").
+associated("CYP2D6*10", amitriptyline, 15205367, increased, "plasma nortriptyline vs CYP2D6*1").
 
-Associated("CYP2C19*2", Amitriptyline, 20531370, Decreased, "metabolism vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 20531370, Increased, "metabolism vs CYP2C19*2").
+associated("CYP2C19*2", amitriptyline, 20531370, decreased, "metabolism vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 20531370, increased, "metabolism vs CYP2C19*2").
 
-Associated("CYP2D6*2", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*10", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*87", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*88", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*89", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*90", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*91", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*93", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*94", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*95", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*97", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*98", Amitriptyline, 27097346, Decreased, "clearnce vs CYP2D6*1").
-Associated("CYP2D6*1", Amitriptyline, 27097346, Increased, "clearnce vs CYP2C19*2 & CYP2C19*10 & CYP2C19*87 & CYP2C19*88 & CYP2C19*89 & CYP2C19*90 & CYP2C19*91 & CYP2C19*93 & CYP2C19*94 & CYP2C19*95 & CYP2C19*97 & CYP2C19*98").
+associated("CYP2D6*2", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*10", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*87", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*88", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*89", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*90", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*91", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*93", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*94", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*95", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*97", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*98", amitriptyline, 27097346, decreased, "clearnce vs CYP2D6*1").
+associated("CYP2D6*1", amitriptyline, 27097346, increased, "clearnce vs CYP2C19*2 & CYP2C19*10 & CYP2C19*87 & CYP2C19*88 & CYP2C19*89 & CYP2C19*90 & CYP2C19*91 & CYP2C19*93 & CYP2C19*94 & CYP2C19*95 & CYP2C19*97 & CYP2C19*98").
 
-Associated("CYP2D6*1/*1xN", Amitriptyline, 22733128, Increased, "discontinuation").
-Associated("CYP2D6*2/*2xN", Amitriptyline, 22733128, Increased, "discontinuation").
+associated("CYP2D6*1/*1xN", amitriptyline, 22733128, increased, "discontinuation").
+associated("CYP2D6*2/*2xN", amitriptyline, 22733128, increased, "discontinuation").
 
-Associated("CYP2D6*2", Amitriptyline, 16044105, Decreased, "metabolism vs CYP2D6*1/*1").
-Associated("CYP2D6*1/*1", Amitriptyline, 16044105, Decreased, "metabolism vs CYP2D6*2").
+associated("CYP2D6*2", amitriptyline, 16044105, decreased, "metabolism vs CYP2D6*1/*1").
+associated("CYP2D6*1/*1", amitriptyline, 16044105, decreased, "metabolism vs CYP2D6*2").
 
-Associated(rs12720067T, Amitriptyline, 18215618, Increased, "Depression remission vs rs12720067C").
+associated(rs12720067T, amitriptyline, 18215618, increased, "Depression remission vs rs12720067C").
 
-Associated("CYP2C19*2/*2", Amitriptyline, 20531370, Increased, "concentration vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 20531370, Increased, "concentration vs CYP2C19*2/*2").
+associated("CYP2C19*2/*2", amitriptyline, 20531370, increased, "concentration vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 20531370, increased, "concentration vs CYP2C19*2/*2").
 
-Associated("CYP2D6*4", Amitriptyline, 15205367, Increased, "plasma nortriptyline vs CYP2D6*1").
-Associated("CYP2D6*1", Amitriptyline, 15205367, Decreased, "plasma nortriptyline vs CYP2D6*4").
+associated("CYP2D6*4", amitriptyline, 15205367, increased, "plasma nortriptyline vs CYP2D6*1").
+associated("CYP2D6*1", amitriptyline, 15205367, decreased, "plasma nortriptyline vs CYP2D6*4").
 
-Associated(rs2235040T, Amitriptyline, 18215618, Increased, "Depression remission vs rs2235040C").
-Associated(rs2235040C, Amitriptyline, 18215618, Decreased, "Depression remission vs rs2235040T").
+associated(rs2235040T, amitriptyline, 18215618, increased, "Depression remission vs rs2235040C").
+associated(rs2235040C, amitriptyline, 18215618, decreased, "Depression remission vs rs2235040T").
 
-Associated(rs3892097TT, Amitriptyline, 18070221, Decreased, "decreased dose vs rs3892097CC").
-Associated(rs3892097CC, Amitriptyline, 18070221, Increased, "decreased dose vs rs3892097TT").
+associated(rs3892097TT, amitriptyline, 18070221, decreased, "decreased dose vs rs3892097CC").
+associated(rs3892097CC, amitriptyline, 18070221, increased, "decreased dose vs rs3892097TT").
 
-Associated(rs10248420G, Amitriptyline, 18215618, Increased, "Depression remission vs rs10248420A").
-Associated(rs10248420A, Amitriptyline, 18215618, Decreased, "Depression remission vs rs10248420G").
+associated(rs10248420G, amitriptyline, 18215618, increased, "Depression remission vs rs10248420A").
+associated(rs10248420A, amitriptyline, 18215618, decreased, "Depression remission vs rs10248420G").
 
-Associated(CYP2D6 poor metabolizers, Amitriptyline, 1527229, Increased, "antidepressant serum vs CYP2D6 normal metabolizers").
-Associated(CYP2D6 normal metabolizers, Amitriptyline, 1527229, Decreased, "antidepressant serum vs CYP2D6 poor metabolizers").
+associated("CYP2D6", amitriptyline, 1527229, increased, "levels in CYP2D6 poor metabolizers").
 
-Associated(rs4244285AA, Amitriptyline, 20531370, Increased, "amitriptyline plasma levels and metabolic ratio AT NT values but not amtriptyline+nortriptyline plasma concentration vs rs4244285GG").
-Associated(rs4244285CC, Amitriptyline, 20531370, Decreased, "amitriptyline plasma levels and metabolic ratio AT NT values but not amtriptyline+nortriptyline plasma concentration vs rs4244285AA").
+associated(rs4244285AA, amitriptyline, 20531370, increased, "amitriptyline plasma levels and metabolic ratio AT NT values but not amtriptyline+nortriptyline plasma concentration vs rs4244285GG").
+associated(rs4244285CC, amitriptyline, 20531370, decreased, "amitriptyline plasma levels and metabolic ratio AT NT values but not amtriptyline+nortriptyline plasma concentration vs rs4244285AA").
 
-Associated(rs3892097TT, Amitriptyline, 18070221, Increased, "side effects vs rs3892097CC").
-Associated(rs3892097CC, Amitriptyline, 18070221, Decreased, "side effects  vs rs3892097TT").
+associated(rs3892097TT, amitriptyline, 18070221, increased, "side effects vs rs3892097CC").
+associated(rs3892097CC, amitriptyline, 18070221, decreased, "side effects  vs rs3892097TT").
 
-Associated("CYP2D6*3", Amitriptyline, 8941025, Increased, "risk of drug toxicity in people with Depression").
-Associated("CYP2D6*4", Amitriptyline, 8941025, Increased, "risk of drug toxicity in people with Depression").
-Associated("CYP2D6*5", Amitriptyline, 8941025, Increased, "risk of drug toxicity in people with Depression").
-Associated("CYP2D6*6", Amitriptyline, 8941025, Increased, "risk of drug toxicity in people with Depression").
+associated("CYP2D6*3", amitriptyline, 8941025, increased, "risk of drug toxicity in people with Depression").
+associated("CYP2D6*4", amitriptyline, 8941025, increased, "risk of drug toxicity in people with Depression").
+associated("CYP2D6*5", amitriptyline, 8941025, increased, "risk of drug toxicity in people with Depression").
+associated("CYP2D6*6", amitriptyline, 8941025, increased, "risk of drug toxicity in people with Depression").
 
-Associated("CYP2C19*2/*2", Amitriptyline, 12012142, Increased, "concentration vs CYP2C19*1/*1 & CYP2C19*1/*2").
-Associated("CYP2C19*2/*3", Amitriptyline, 12012142, Increased, "concentration vs CYP2C19*1/*1 & CYP2C19*1/*2").
-Associated("CYP2C19*1/*1", Amitriptyline, 12012142, Decreased, "concentration vs CYP2C19*2/*2 & CYP2C19*2/*3").
-Associated("CYP2C19*1/*2", Amitriptyline, 12012142, Decreased, "concentration vs CYP2C19*2/*2 & CYP2C19*2/*3").
+associated("CYP2C19*2/*2", amitriptyline, 12012142, increased, "concentration vs CYP2C19*1/*1 & CYP2C19*1/*2").
+associated("CYP2C19*2/*3", amitriptyline, 12012142, increased, "concentration vs CYP2C19*1/*1 & CYP2C19*1/*2").
+associated("CYP2C19*1/*1", amitriptyline, 12012142, decreased, "concentration vs CYP2C19*2/*2 & CYP2C19*2/*3").
+associated("CYP2C19*1/*2", amitriptyline, 12012142, decreased, "concentration vs CYP2C19*2/*2 & CYP2C19*2/*3").
 
-Associated(rs11983225C, Amitriptyline, 18215618, Increased, "Depression remission vs rs11983225T").
-Associated(rs11983225T, Amitriptyline, 18215618, Decreased, "Depression remission vs rs11983225C").
+associated(rs11983225C, amitriptyline, 18215618, increased, "Depression remission vs rs11983225T").
+associated(rs11983225T, amitriptyline, 18215618, decreased, "Depression remission vs rs11983225C").
 
-Associated("CYP2D6*1/*4", Amitriptyline, 15590749, Increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
-Associated("CYP2D6*2/*4", Amitriptyline, 15590749, Increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
-Associated("CYP2D6*2/*5", Amitriptyline, 15590749, Increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
-Associated("CYP2D6*4/*41", Amitriptyline, 15590749, Increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
-Associated("CYP2D6*4/*10", Amitriptyline, 15590749, Increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
-Associated("CYP2D6*1/*1", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
-Associated("CYP2D6*1/*2", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
-Associated("CYP2D6*2/*1xN", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
-Associated("CYP2D6*2/*2", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
-Associated("CYP2D6*1/*41", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
-Associated("CYP2D6*1/*10", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
-Associated("CYP2D6*2/*41", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
+associated("CYP2D6*1/*4", amitriptyline, 15590749, increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
+associated("CYP2D6*2/*4", amitriptyline, 15590749, increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
+associated("CYP2D6*2/*5", amitriptyline, 15590749, increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
+associated("CYP2D6*4/*41", amitriptyline, 15590749, increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
+associated("CYP2D6*4/*10", amitriptyline, 15590749, increased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*1 & CYP2D6*1/*2 & CYP2D6*2/*1xN & CYP2D6*2/*2 & CYP2D6*1/*41 & CYP2D6*1/*10 & CYP2D6*2/*41").
+associated("CYP2D6*1/*1", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
+associated("CYP2D6*1/*2", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
+associated("CYP2D6*2/*1xN", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
+associated("CYP2D6*2/*2", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
+associated("CYP2D6*1/*41", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
+associated("CYP2D6*1/*10", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
+associated("CYP2D6*2/*41", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2D6*1/*4 & CYP2D6*2/*4 & CYP2D6*2/*5 & CYP2D6*4/*41 & CYP2D6*4/*10").
 
-Associated(rs2032583AG, Amitriptyline, 18215618, Increased, "Depression remission vs rs2032583AA").
-Associated(rs2032583GG, Amitriptyline, 18215618, Increased, "Depression remission vs rs2032583AA").
-Associated(rs2032583AA, Amitriptyline, 18215618, Decreased, "Depression remission vs rs2032583AG & rs2032583GG").
+associated(rs2032583AG, amitriptyline, 18215618, increased, "Depression remission vs rs2032583AA").
+associated(rs2032583GG, amitriptyline, 18215618, increased, "Depression remission vs rs2032583AA").
+associated(rs2032583AA, amitriptyline, 18215618, decreased, "Depression remission vs rs2032583AG & rs2032583GG").
 
-Associated(rs4148739C, Amitriptyline, 18215618, Increased, "Depression remission vs rs4148739T").
-Associated(rs4148739T, Amitriptyline, 18215618, Decreased, "Depression remission vs rs4148739C").
+associated(rs4148739C, amitriptyline, 18215618, increased, "Depression remission vs rs4148739T").
+associated(rs4148739T, amitriptyline, 18215618, decreased, "Depression remission vs rs4148739C").
 
-Associated("CYP2D6*4", Amitriptyline, 17764479, Increased, "amitriptyline (E)-10- OH-AT ratio vs CYP2D6*1").
-Associated("CYP2D6*1", Amitriptyline, 17764479, Decreased, "amitriptyline (E)-10- OH-AT ratio vs CYP2D6*4").
+associated("CYP2D6*4", amitriptyline, 17764479, increased, "amitriptyline (E)-10- OH-AT ratio vs CYP2D6*1").
+associated("CYP2D6*1", amitriptyline, 17764479, decreased, "amitriptyline (E)-10- OH-AT ratio vs CYP2D6*4").
 
-Associated("CYP2C19*1/*1", Amitriptyline, 15590749, Increased, "risk of drug toxicity in people with Depression vs CYP2C19*1/*2 & CYP2C19*2/*2").
-Associated("CYP2C19*2/*2", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*2", Amitriptyline, 15590749, Decreased, "risk of drug toxicity in people with Depression vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 15590749, increased, "risk of drug toxicity in people with Depression vs CYP2C19*1/*2 & CYP2C19*2/*2").
+associated("CYP2C19*2/*2", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2C19*1/*1").
+associated("CYP2C19*1/*2", amitriptyline, 15590749, decreased, "risk of drug toxicity in people with Depression vs CYP2C19*1/*1").
 
-Associated(CYP2D6 poor metabolizers, Amitriptyline, 16129989, Decreased, "response").
-Associated(CYP2D6 normal metabolizers, Amitriptyline, 16129989, Increased, "response").
+associated("CYP2D6", amitriptyline, 16129989, decreased, "response in CYP2D6 poor metabolizers").
 
-Associated("CYP2D6*4/*4", Amitriptyline, 18070221, Decreased, "dose vs CYP2D6*1/*1").
-Associated("CYP2D6*1/*1", Amitriptyline, 18070221, Increased, "dose vs CYP2D6*4/*4").
+associated("CYP2D6*4/*4", amitriptyline, 18070221, decreased, "dose vs CYP2D6*1/*1").
+associated("CYP2D6*1/*1", amitriptyline, 18070221, increased, "dose vs CYP2D6*4/*4").
 
-Associated(rs2235015A, Amitriptyline, 18215618, Increased, "Depression remission vs rs2235015C").
-Associated(rs2235015C, Amitriptyline, 18215618, Decreased, "Depression remission vs rs2235015A").
+associated(rs2235015A, amitriptyline, 18215618, increased, "Depression remission vs rs2235015C").
+associated(rs2235015C, amitriptyline, 18215618, decreased, "Depression remission vs rs2235015A").
 
-Associated("CYP2C19*1/*2", Amitriptyline, 12172336, Increased, "amitriptyline-nortriptyline ratio vs CYP2C19*1/*1").
-Associated("CYP2C19*2/*2", Amitriptyline, 12172336, Increased, "amitriptyline-nortriptyline ratio vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 12172336, Decreased, "amitriptyline-nortriptyline ratio vs CYP2C19*1/*2 & CYP2C19*2/*2").
+associated("CYP2C19*1/*2", amitriptyline, 12172336, increased, "amitriptyline-nortriptyline ratio vs CYP2C19*1/*1").
+associated("CYP2C19*2/*2", amitriptyline, 12172336, increased, "amitriptyline-nortriptyline ratio vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 12172336, decreased, "amitriptyline-nortriptyline ratio vs CYP2C19*1/*2 & CYP2C19*2/*2").
 
-Associated("CYP2D6*4/*4", Amitriptyline, 17764479, Increased, "amitriptyline (E)-10- OH-AT ratio vs CYP2D6*1").
-Associated("CYP2D6*1", Amitriptyline, 17764479, Decreased, "amitriptyline (E)-10- OH-AT ratio vs CYP2D6*4/*4").
+associated("CYP2D6*4/*4", amitriptyline, 17764479, increased, "amitriptyline (E)-10- OH-AT ratio vs CYP2D6*1").
+associated("CYP2D6*1", amitriptyline, 17764479, decreased, "amitriptyline (E)-10- OH-AT ratio vs CYP2D6*4/*4").
 
-Associated(rs7787082A, Amitriptyline, 18215618, Increased, "Depression remission vs rs7787082G").
-Associated(rs7787082G, Amitriptyline, 18215618, Decreased, "Depression remission vs rs7787082A").
+associated(rs7787082A, amitriptyline, 18215618, increased, "Depression remission vs rs7787082G").
+associated(rs7787082G, amitriptyline, 18215618, decreased, "Depression remission vs rs7787082A").
 
-Associated("CYP2C19*1/*3", Amitriptyline, 12172336, Increased, "amitriptyline nortriptyline ratio vs CYP2C19*1/*1").
-Associated("CYP2C19*2/*3", Amitriptyline, 12172336, Increased, "amitriptyline nortriptyline ratio vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 12172336, Decreased, "amitriptyline nortriptyline ratio vs CYP2C19*1/*3 & CYP2C19*2/*3").
+associated("CYP2C19*1/*3", amitriptyline, 12172336, increased, "amitriptyline nortriptyline ratio vs CYP2C19*1/*1").
+associated("CYP2C19*2/*3", amitriptyline, 12172336, increased, "amitriptyline nortriptyline ratio vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 12172336, decreased, "amitriptyline nortriptyline ratio vs CYP2C19*1/*3 & CYP2C19*2/*3").
 
-Associated("CYP2D6*4/*5", Amitriptyline, 16024198, Decreased, "metabolism vs CYP2D6*9 & CYP2D6*10 & CYP2D6*1 & CYP2D6*2").
-Associated("CYP2D6*4/*4", Amitriptyline, 16024198, Decreased, "metabloism vs CYP2D6*9 & CYP2D6*10 & CYP2D6*1 & CYP2D6*2").
-Associated("CYP2D6*9", Amitriptyline, 16024198, Increased, "metabolism vs CYP2D6*4/*4 &CYP2D6*4/*5").
-Associated("CYP2D6*10", Amitriptyline, 16024198, Increased, "metabolism vs CYP2D6*4/*4 &CYP2D6*4/*5").
-Associated("CYP2D6*1", Amitriptyline, 16024198, Increased, "metabloism vs CYP2D6*4/*4 &CYP2D6*4/*5").
-Associated("CYP2D6*2", Amitriptyline, 16024198, Increased, "metabolism vs CYP2D6*4/*4 &CYP2D6*4/*5").
+associated("CYP2D6*4/*5", amitriptyline, 16024198, decreased, "metabolism vs CYP2D6*9 & CYP2D6*10 & CYP2D6*1 & CYP2D6*2").
+associated("CYP2D6*4/*4", amitriptyline, 16024198, decreased, "metabloism vs CYP2D6*9 & CYP2D6*10 & CYP2D6*1 & CYP2D6*2").
+associated("CYP2D6*9", amitriptyline, 16024198, increased, "metabolism vs CYP2D6*4/*4 &CYP2D6*4/*5").
+associated("CYP2D6*10", amitriptyline, 16024198, increased, "metabolism vs CYP2D6*4/*4 &CYP2D6*4/*5").
+associated("CYP2D6*1", amitriptyline, 16024198, increased, "metabloism vs CYP2D6*4/*4 &CYP2D6*4/*5").
+associated("CYP2D6*2", amitriptyline, 16024198, increased, "metabolism vs CYP2D6*4/*4 &CYP2D6*4/*5").
 
-Associated(rs10280101C, Amitriptyline, 18215618, Increased, "Depression remission vs rs10280101A").
-Associated(rs10280101A, Amitriptyline, 18215618, Decreased, "Depression remission vs rs10280101C").
+associated(rs10280101C, amitriptyline, 18215618, increased, "Depression remission vs rs10280101A").
+associated(rs10280101A, amitriptyline, 18215618, decreased, "Depression remission vs rs10280101C").
 
-Associated(rs4244285AA, Amitriptyline, 16044105, Increased, "log metabolic ratio of amitriptyline nortriptyline vs rs4244285GG").
-Associated(rs4244285GG, Amitriptyline, 16044105, Decreased, "log metabolic ratio of amitriptyline nortriptyline vs rs4244285AA").
+associated(rs4244285AA, amitriptyline, 16044105, increased, "log metabolic ratio of amitriptyline nortriptyline vs rs4244285GG").
+associated(rs4244285GG, amitriptyline, 16044105, decreased, "log metabolic ratio of amitriptyline nortriptyline vs rs4244285AA").
 
-Associated("CYP2C19*1/*2", Amitriptyline, 15205367, Increased, "concentration vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 15205367, Decreased, "concentration vs CYP2C19*1/*2").
+associated("CYP2C19*1/*2", amitriptyline, 15205367, increased, "concentration vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 15205367, decreased, "concentration vs CYP2C19*1/*2").
 
-Associated("CYP2D6*4/*4", Amitriptyline, 18070221, Increased, "risk of side effects vs CYP2D6*1/*1").
-Associated("CYP2D6*1/*1", Amitriptyline, 18070221, Decreased, "risk of side effects vs CYP2D6*4/*4").
+associated("CYP2D6*4/*4", amitriptyline, 18070221, increased, "risk of side effects vs CYP2D6*1/*1").
+associated("CYP2D6*1/*1", amitriptyline, 18070221, decreased, "risk of side effects vs CYP2D6*4/*4").
 
-Associated("CYP2C19*2/*3", Amitriptyline, 12172336, Increased, "mean amitriptyline concentrations vs CYP2C19*1/*1").
-Associated("CYP2C19*1/*1", Amitriptyline, 12172336, Decreased, "mean amitriptyline concentrations vs CYP2C19*1/*3").
+associated("CYP2C19*2/*3", amitriptyline, 12172336, increased, "mean amitriptyline concentrations vs CYP2C19*1/*1").
+associated("CYP2C19*1/*1", amitriptyline, 12172336, decreased, "mean amitriptyline concentrations vs CYP2C19*1/*3").
 
-Associated(rs4148740G, Amitriptyline, 18215618, Increased, "Depression remission vs rs4148740A").
-Associated(rs4148740A, Amitriptyline, 18215618, Decreased, "Depression remission vs rs4148740G").
+associated(rs4148740G, amitriptyline, 18215618, increased, "Depression remission vs rs4148740A").
+associated(rs4148740A, amitriptyline, 18215618, decreased, "Depression remission vs rs4148740G").
 
 
 /******************************************************************************/
