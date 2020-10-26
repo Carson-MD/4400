@@ -47,12 +47,12 @@ drug(zuclopenthixol).
 /************
 * ILLNESSES *
 ************/
-illness(depression).
-illness(depressive_disorder).
-illness(mood_disorder).
-illness(anxiety_disorder).
-illness(obsessive-compulsive_disorder).
-illness(schizophrenia).
+illness('depression').
+illness('depressive disorder').
+illness('mood disorder').
+illness('anxiety disorder').
+illness('obsessive compulsive_disorder').
+illness('schizophrenia').
 
 /******************************************************************************/
 /*CARSON's WORKSPACE*/
