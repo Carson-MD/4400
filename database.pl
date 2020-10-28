@@ -7,8 +7,8 @@ FORMAT:
 associated(variant, drug, pubID, adjective (inc-dec), 'attribute').
 
 BRAINSTORM:
-bestMed(Allele, illness, Med, pubId):- treats(Med, illness),positivelyassociated(Allele, Med, pubId).
-wrstMed(Allele, illness, Med, pubId):- treats(Med, illness),negativelyassociated(Allele, Med, pubId).
+bestMed(Allele, condition, Med, pubId):- treats(Med, condition),positivelyassociated(Allele, Med, pubId).
+wrstMed(Allele, condition, Med, pubId):- treats(Med, condition),negativelyassociated(Allele, Med, pubId).
 associated(Allele, Med, pubId, IncDec, Param).
 
 HOW TO USE (SO FAR):
@@ -19,11 +19,11 @@ drug(amitriptyline).
 drug(X).
 >>return all drugs in the database.
 
-2) Check if illness is in the database:
-illness(Depression).
+2) Check if condition is in the database:
+condition(Depression).
 >>return TRUE.
-illness(X).
->>return all illnesses in the database.
+condition(X).
+>>return all conditions in the database.
 
 3) Check for associations:
 FORMAT
@@ -82,16 +82,35 @@ drug(venlafaxine).
 drug(vortioxetine).
 drug(zuclopenthixol).
 
-/************
-* ILLNESSES *
-************/
+/**************
+* CONDITIONS *
+***************/
 
-illness('depression').
-illness('depressive disorder').
-illness('mood disorder').
-illness('anxiety disorder').
-illness('obsessive compulsive_disorder').
-illness('schizophrenia').
+condition('depression').
+condition('depressive disorder').
+condition('mood disorder').
+condition('anxiety disorder').
+condition('obsessive compulsive disorder').
+condition('schizophrenia').
+condition('healthy individual').
+
+/**************
+* EFFECTS *
+***************/
+effect('adverse effects').
+effect('blood concentration').
+effect('clearance').
+effect('dose').
+effect('HAM-A reduction').
+effect('improvement').
+effect('levels').
+effect('metabolism').
+effect('chance of remission').
+effect('side effects').
+effect('response').
+effect('risk of suicidal ideation').
+effect('toxicity').
+effect('discontinuation').
 
 /***************
 * ASSOCIATIONS *
@@ -127,19 +146,19 @@ associated('CYP2D6*10', amitriptyline, 15205367, increased, 'plasma nortriptylin
 associated('CYP2C19*2', amitriptyline, 20531370, decreased, 'metabolism vs CYP2C19*1/*1').
 associated('CYP2C19*1/*1', amitriptyline, 20531370, increased, 'metabolism vs CYP2C19*2').
 
-associated('CYP2D6*2', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*10', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*87', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*88', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*89', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*90', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*91', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*93', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*94', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*95', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*97', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*98', amitriptyline, 27097346, decreased, 'clearnce vs CYP2D6*1').
-associated('CYP2D6*1', amitriptyline, 27097346, increased, 'clearnce vs CYP2C19*2 & CYP2C19*10 & CYP2C19*87 & CYP2C19*88 & CYP2C19*89 & CYP2C19*90 & CYP2C19*91 & CYP2C19*93 & CYP2C19*94 & CYP2C19*95 & CYP2C19*97 & CYP2C19*98').
+associated('CYP2D6*2', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*10', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*87', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*88', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*89', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*90', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*91', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*93', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*94', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*95', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*97', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*98', amitriptyline, 27097346, decreased, 'clearance vs CYP2D6*1').
+associated('CYP2D6*1', amitriptyline, 27097346, increased, 'clearance vs CYP2C19*2 & CYP2C19*10 & CYP2C19*87 & CYP2C19*88 & CYP2C19*89 & CYP2C19*90 & CYP2C19*91 & CYP2C19*93 & CYP2C19*94 & CYP2C19*95 & CYP2C19*97 & CYP2C19*98').
 
 associated('CYP2D6*1/*1xN', amitriptyline, 22733128, increased, 'discontinuation').
 associated('CYP2D6*2/*2xN', amitriptyline, 22733128, increased, 'discontinuation').
