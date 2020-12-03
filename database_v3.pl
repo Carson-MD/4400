@@ -537,6 +537,11 @@ association('CYP2D9', '*4', zuclopenthixol, 12197620, -1, 'metabolism', 'NA').
 **                                   RULES                                    **
 ********************************************************************************
 *******************************************************************************/
+
+/*******************************************************************************
+Effects and Recommendations
+*******************************************************************************/
+
 /*Use With RS Numbers (Unique Across All Genes)*/
 list_negative_effects(Drug, RsN, Matches):-findall((ID, N), (negative_effect(N),
                                                       association(_, RsN, Drug, ID, 1, N, _)),
@@ -574,3 +579,9 @@ recommendation(Drug, RsN, X):-negative_effect_score(Drug, RsN, CN),
 recommendation(Drug, Gene, Allele, X):-negative_effect_score(Drug, Gene, Allele, CN),
                                  (CN < 1, positive_effect_score(Drug, Gene, Allele, CP),
                                   CP > 0, X = 'yes'; CN > 0, X = 'no').
+
+/*******************************************************************************
+Dose Rate
+*******************************************************************************/
+dose_rate_multiplier(Drug, Gene, Allele, Rate):-association(Gene, Allele, Drug, _, X, 'clearance', _),
+                                                Rate is 1 * (1 + X).
