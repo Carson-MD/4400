@@ -41,6 +41,12 @@ association('CYP2C19', '*1/*2', amitriptyline, X, Y, Z).
   ...(plus additional matches)
 *******************************************************************************/
 
+/*******************************************************************************
+********************************************************************************
+**                                   FACTS                                    **
+********************************************************************************
+*******************************************************************************/
+
 /********
 * GENES *
 ********/
@@ -194,23 +200,23 @@ association('CYP2D9', '*2/*2', amitriptyline, 22733128, 1, 'discontinuation', 'N
 
 association('CYP2D9', '*2', amitriptyline, 16044105, -1, 'metabolism', 'NA').
 
-association('MDR1', rs12720067T, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs12720067T', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 association('CYP2C19', '*2/*2', amitriptyline, 20531370, 1, 'concentration', 'NA').
 
 association('CYP2D9', '*4', amitriptyline, 15205367, 1, 'plasma nortriptyline', 'NA').
 
-association('MDR1', rs2235040T, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs2235040T', amitriptyline, 18215618, 1, 'remission', 'depression').
 
-association('CYP2D6', rs3892097TT, amitriptyline, 18070221, -1, 'dose', 'NA').
+association('CYP2D6RsN', 'rs3892097TT', amitriptyline, 18070221, -1, 'dose', 'NA').
 
-association('MDR1', rs10248420G, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs10248420G', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 association('CYP2D6', 'NA', amitriptyline, 1527229, 1, 'levels', 'NA').
 
-association('CYP2C19', rs4244285AA, amitriptyline, 20531370, 1, 'plasma levels', 'NA').
+association('CYP2C19RsN', 'rs4244285AA', amitriptyline, 20531370, 1, 'plasma levels', 'NA').
 
-association('CYP2D6', rs3892097TT, amitriptyline, 18070221, 1, 'side effects', 'NA').
+association('CYP2D6RsN', 'rs3892097TT', amitriptyline, 18070221, 1, 'side effects', 'NA').
 
 association('CYP2D9', '*3', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
 association('CYP2D9', '*4', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
@@ -222,7 +228,7 @@ association('CYP2C19', '*2/*3', amitriptyline, 12012142, 1, 'concentration', 'NA
 association('CYP2C19', '*1/*1', amitriptyline, 12012142, -1, 'concentration', 'NA').
 association('CYP2C19', '*1/*2', amitriptyline, 12012142, -1, 'concentration', 'NA').
 
-association('MDR1', rs11983225C, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs11983225C', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 association('CYP2D9', '*1/*4', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
 association('CYP2D9', '*2/*4', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
@@ -237,10 +243,10 @@ association('CYP2D9', '*1/*41', amitriptyline, 15590749, -1, 'drug toxicity', 'N
 association('CYP2D9', '*1/*10', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
 association('CYP2D9', '*2/*41', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
 
-association('MDR1', rs2032583AG, amitriptyline, 18215618, 1, 'remission', 'depression').
-association('MDR1', rs2032583GG, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs2032583AG', amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs2032583GG', amitriptyline, 18215618, 1, 'remission', 'depression').
 
-association('MDR1', rs4148739C, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs4148739C', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 association('CYP2C19', '*1/*1', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
 association('CYP2C19', '*2/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
@@ -250,12 +256,12 @@ association('CYP2D6', 'NA', amitriptyline, 16129989, -1, 'response', 'NA').
 
 association('CYP2D9', '*4/*4', amitriptyline, 18070221, -1, 'dose', 'NA').
 
-association('MDR1', rs2235015A, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs2235015A', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 association('CYP2C19', '*1/*2', amitriptyline, 12172336, 1, 'amitriptyline-nortriptyline ratio', 'NA').
 association('CYP2C19', '*2/*2', amitriptyline, 12172336, 1, 'amitriptyline-nortriptyline ratio', 'NA').
 
-association('MDR1', rs7787082A, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs7787082A', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 association('CYP2C19', '*1/*3', amitriptyline, 12172336, 1, 'amitriptyline-nortriptyline ratio', 'NA').
 association('CYP2C19', '*2/*3', amitriptyline, 12172336, 1, 'amitriptyline-nortriptyline ratio', 'NA').
@@ -267,9 +273,9 @@ association('CYP2D9', '*10', amitriptyline, 16024198, 1, 'metabolism', 'NA').
 association('CYP2D9', '*1', amitriptyline, 16024198, 1, 'metabloism', 'NA').
 association('CYP2D9', '*2', amitriptyline, 16024198, 1, 'metabolism', 'NA').
 
-association('MDR1', rs10280101C, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs10280101C', amitriptyline, 18215618, 1, 'remission', 'depression').
 
-association('CYP2C19', rs4244285AA, amitriptyline, 16044105, 1, 'amitriptyline-nortriptyline ratio', 'NA').
+association('CYP2C19RsN', 'rs4244285AA', amitriptyline, 16044105, 1, 'amitriptyline-nortriptyline ratio', 'NA').
 
 association('CYP2C19', '*1/*2', amitriptyline, 15205367, 1, 'concentration', 'NA').
 
@@ -277,30 +283,30 @@ association('CYP2D9', '*4/*4', amitriptyline, 18070221, 1, 'risk of side effects
 
 association('CYP2C19', '*2/*3', amitriptyline, 12172336, 1, 'concentration', 'NA').
 
-association('MDR1', rs4148740G, amitriptyline, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs4148740G', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 /*******************************************************************************
 venlafaxine
 *******************************************************************************/
 
-association('MDR1', rs4148740G, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs4148740G', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('FKBP5', rs1360780T, venlafaxine, 21449676, 1, 'suicide risk', 'depression').
+association('FKBP5RsN', 'rs1360780T', venlafaxine, 21449676, 1, 'suicide risk', 'depression').
 
-association('HTR2A', rs7997012AG, venlafaxine, 22006095, 1, 'response', 'NA').
-association('HTR2A', rs7997012GG, venlafaxine, 22006095, 1, 'response', 'NA').
+association('HTR2ARsN', 'rs7997012AG', venlafaxine, 22006095, 1, 'response', 'NA').
+association('HTR2ARsN', 'rs7997012GG', venlafaxine, 22006095, 1, 'response', 'NA').
 
-association('MDR1', rs10280101C, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs10280101C', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('CYP2D6', rs3892097CT, venlafaxine, 16642541, 1, 'concentration', 'depression').
+association('CYP2D6RsN', 'rs3892097CT', venlafaxine, 16642541, 1, 'concentration', 'depression').
 
-association('CYP2D6', rs3892097TT, venlafaxine, 16642541, 1, 'concentration', 'depression').
+association('CYP2D6RsN', 'rs3892097TT', venlafaxine, 16642541, 1, 'concentration', 'depression').
 
 association('CYP2D6', 'NA', venlafaxine, 24858822, -1, 'metabolism', 'NA').
 
-association('MDR1', rs7787082A, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs7787082A', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('HTR1B', rs130058A, venlafaxine, 21449676, -1, 'suicide risk', 'depression').
+association('HTR1BRsN', 'rs130058A', venlafaxine, 21449676, -1, 'suicide risk', 'depression').
 
 association('CYP2D9', '*2', venlafaxine, 26406933, -1, 'clearance', 'NA').
 association('CYP2D9', '*10', venlafaxine, 26406933, -1, 'clearance', 'NA').
@@ -320,95 +326,95 @@ association('CYP2D9', '*4/*17', venlafaxine, 17803873, -1, 'dose', 'depression')
 association('CYP2D9', '*4/*41', venlafaxine, 17803873, -1, 'dose', 'depression').
 association('CYP2D9', '*4/*10', venlafaxine, 17803873, -1, 'dose', 'depression').
 
-association('COMT', rs4680AA, venlafaxine, 22417933, 1, 'response', 'anxiety').
-association('COMT', rs4680AG, venlafaxine, 22417933, 1, 'response', 'anxiety').
+association('COMTRsN', 'rs4680AA', venlafaxine, 22417933, 1, 'response', 'anxiety').
+association('COMTRsN', 'rs4680AG', venlafaxine, 22417933, 1, 'response', 'anxiety').
 
-association('MDR1', rs4148739C, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs4148739C', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('MDR1', rs2032583AG, venlafaxine, 18215618, 1, 'remission', 'depression').
-association('MDR1', rs2032583GG, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs2032583AG', venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs2032583GG', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('HTR7', rs7905446TT, venlafaxine, 30874608, -1, 'response', 'depression').
-association('HTR7', rs7905446GG, venlafaxine, 30874608, 1, 'response', 'depression').
-association('HTR7', rs7905446GT, venlafaxine, 30874608, 1, 'response', 'depression').
+association('HTR7RsN', 'rs7905446TT', venlafaxine, 30874608, -1, 'response', 'depression').
+association('HTR7RsN', 'rs7905446GG', venlafaxine, 30874608, 1, 'response', 'depression').
+association('HTR7RsN', 'rs7905446GT', venlafaxine, 30874608, 1, 'response', 'depression').
 
 association('CYP2D6', 'NA', venlafaxine, 24858822, -1, 'metabolism', 'elderly').
 
-association('MDR1', rs2032582A, venlafaxine, 21449676, 1, 'suicide risk', 'depression').
+association('MDR1RsN', 'rs2032582A', venlafaxine, 21449676, 1, 'suicide risk', 'depression').
 
-association('HTR2A', rs7997012AG, venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
-association('HTR2A', rs7997012GG, venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
-association('HTR2A', rs7997012AA, venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
+association('HTR2ARsN', 'rs7997012AG', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
+association('HTR2ARsN', 'rs7997012GG', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
+association('HTR2ARsN', 'rs7997012AA', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
 
-association('MDR1', rs11983225C, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs11983225C', venlafaxine, 18215618, 1, 'remission', 'depression').
 
 association('CYP2D9', '*4/*4', venlafaxine, 10774634, 1, 'level', 'depression').
 
 association('CYP2D6', 'NA', venlafaxine, 24858822, 1, 'metabolism', 'elderly').
 
-association('MDR1', rs10248420G, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs10248420G', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('CYP2D6', rs5030655del, venlafaxine, 16958828, -1, 'metabolism', 'depression').
+association('CYP2D6RsN', 'rs5030655del', venlafaxine, 16958828, -1, 'metabolism', 'depression').
 
-association('MDR1', rs2235040T, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs2235040T', venlafaxine, 18215618, 1, 'remission', 'depression').
 
 association('CYP2D6', 'NA', venlafaxine, 12544511, -1, 'clearance', 'NA').
 
-association('COMT', rs4680GG, venlafaxine, 23706899, 1, 'response', 'depression').
-association('COMT', rs4680AA, venlafaxine, 23706899, -1, 'response', 'depression').
-association('COMT', rs4680AG, venlafaxine, 23706899, -1, 'response', 'depression').
+association('COMTRsN', 'rs4680GG', venlafaxine, 23706899, 1, 'response', 'depression').
+association('COMTRsN', 'rs4680AA', venlafaxine, 23706899, -1, 'response', 'depression').
+association('COMTRsN', 'rs4680AG', venlafaxine, 23706899, -1, 'response', 'depression').
 
 /*CHECK*/
 association('CYP2D9', '*4/*4', venlafaxine, 18214456, -1, 'metabolism', 'depression').
 association('CYP2D9', '*4/*4', venlafaxine, 18214456, 1, 'metabolism', 'depression').
 
-association('MDR1', rs2032583G, venlafaxine, 22641028, 1, 'adverse effects', 'depression').
+association('MDR1RsN', 'rs2032583G', venlafaxine, 22641028, 1, 'adverse effects', 'depression').
 
-association('MDR1', rs12720067T, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs12720067T', venlafaxine, 18215618, 1, 'remission', 'depression').
 
 association('CYP2D9', '*1/*3', venlafaxine, 18214456, -1, 'metabolism', 'depression').
 association('CYP2D9', '*1/*4', venlafaxine, 18214456, -1, 'metabolism', 'depression').
 association('CYP2D9', '*1/*5', venlafaxine, 18214456, -1, 'metabolism', 'depression').
 
-association('MDR1', rs1045642GG, venlafaxine, 26664259, 1, 'response', 'depression').
-association('MDR1', rs1045642AA, venlafaxine, 26664259, -1, 'response', 'depression').
-association('MDR1', rs1045642AG, venlafaxine, 26664259, -1, 'response', 'depression').
+association('MDR1RsN', 'rs1045642GG', venlafaxine, 26664259, 1, 'response', 'depression').
+association('MDR1RsN', 'rs1045642AA', venlafaxine, 26664259, -1, 'response', 'depression').
+association('MDR1RsN', 'rs1045642AG', venlafaxine, 26664259, -1, 'response', 'depression').
 
-association('GABRQ', rs3810651AA, venlafaxine, 23394390, 1, 'response', 'depression').
-association('GABRQ', rs3810651AT, venlafaxine, 23394390, 1, 'response', 'depression').
-association('GABRQ', rs3810651TT, venlafaxine, 23394390, 1, 'response', 'depression').
+association('GABRQRsN', 'rs3810651AA', venlafaxine, 23394390, 1, 'response', 'depression').
+association('GABRQRsN', 'rs3810651AT', venlafaxine, 23394390, 1, 'response', 'depression').
+association('GABRQRsN', 'rs3810651TT', venlafaxine, 23394390, 1, 'response', 'depression').
 
-association('SLC6A4', rs25531TT, venlafaxine, 22907732, 1, 'HAM-A reduction', 'anxiety').
-association('SLC6A4', rs25531CC, venlafaxine, 22907732, -1, 'HAM-A reduction', 'anxiety').
-association('SLC6A4', rs25531CT, venlafaxine, 22907732, -1, 'HAM-A reduction', 'anxiety').
+association('SLC6A4RsN', 'rs25531TT', venlafaxine, 22907732, 1, 'HAM-A reduction', 'anxiety').
+association('SLC6A4RsN', 'rs25531CC', venlafaxine, 22907732, -1, 'HAM-A reduction', 'anxiety').
+association('SLC6A4RsN', 'rs25531CT', venlafaxine, 22907732, -1, 'HAM-A reduction', 'anxiety').
 
-association('TPH2', rs1487278C, venlafaxine, 18496129, 1, 'response', 'depression').
+association('TPH2RsN', 'rs1487278C', venlafaxine, 18496129, 1, 'response', 'depression').
 
-association('GRIA1/3', rs3761555TT, venlafaxine, 23394390, -1, 'response', 'depression').
-association('GRIA1/3', rs3761555CC, venlafaxine, 23394390, 1, 'response', 'depression').
-association('GRIA1/3', rs3761555CT, venlafaxine, 23394390, 1, 'response', 'depression').
+association('GRIA1/3RsN', 'rs3761555TT', venlafaxine, 23394390, -1, 'response', 'depression').
+association('GRIA1/3RsN', 'rs3761555CC', venlafaxine, 23394390, 1, 'response', 'depression').
+association('GRIA1/3RsN', 'rs3761555CT', venlafaxine, 23394390, 1, 'response', 'depression').
 
 association('CYP2D9', '*10/*10', venlafaxine, 25510856, 1, 'concentration', 'healthy').
 
-association('GRIA3', rs502434CC, venlafaxine, 23394390, -1, 'response', 'depression').
-association('GRIA3', rs502434CT, venlafaxine, 23394390, 1, 'response', 'depression').
-association('GRIA3', rs502434TT, venlafaxine, 23394390, 1, 'response', 'depression').
+association('GRIA3RsN', 'rs502434CC', venlafaxine, 23394390, -1, 'response', 'depression').
+association('GRIA3RsN', 'rs502434CT', venlafaxine, 23394390, 1, 'response', 'depression').
+association('GRIA3RsN', 'rs502434TT', venlafaxine, 23394390, 1, 'response', 'depression').
 
-association('MDR1', rs2235015A, venlafaxine, 18215618, 1, 'remission', 'depression').
+association('MDR1RsN', 'rs2235015A', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('SLC6A2', rs2242446CC, venlafaxine, 28068779, 1, 'response', 'depression').
-association('SLC6A2', rs2242446CT, venlafaxine, 28068779, 1, 'response', 'depression').
-association('SLC6A2', rs2242446TT, venlafaxine, 28068779, 1, 'response', 'depression').
+association('SLC6A2RsN', 'rs2242446CC', venlafaxine, 28068779, 1, 'response', 'depression').
+association('SLC6A2RsN', 'rs2242446CT', venlafaxine, 28068779, 1, 'response', 'depression').
+association('SLC6A2RsN', 'rs2242446TT', venlafaxine, 28068779, 1, 'response', 'depression').
 
 association('CYP2D9', '*10/*10', venlafaxine, 10877013, 1, 'Cmax and AUC', 'healthy').
 
-association('MDR1', rs2235040T, venlafaxine, 22641028, 1, 'adverse effects', 'depression').
+association('MDR1RsN', 'rs2235040T', venlafaxine, 22641028, 1, 'adverse effects', 'depression').
 
 association('CYP2D9', '*1/*10', venlafaxine, 10877013, 1, 'Cmax and AUC', 'healthy').
 
-association('GRIA3', rs3761554TT, venlafaxine, 23394390, -1, 'response', 'depression').
-association('GRIA3', rs3761554CC, venlafaxine, 23394390, 1, 'response', 'depression').
-association('GRIA3', rs3761554CT, venlafaxine, 23394390, 1, 'response', 'depression').
+association('GRIA3RsN', 'rs3761554TT', venlafaxine, 23394390, -1, 'response', 'depression').
+association('GRIA3RsN', 'rs3761554CC', venlafaxine, 23394390, 1, 'response', 'depression').
+association('GRIA3RsN', 'rs3761554CT', venlafaxine, 23394390, 1, 'response', 'depression').
 
 association('CYP2D9', '*3', venlafaxine, 8941025, 1, 'toxicity', 'depression').
 association('CYP2D9', '*4', venlafaxine, 8941025, 1, 'toxicity', 'depression').
@@ -427,7 +433,7 @@ association('CYP2D9', '*2', venlafaxine, 14652703, -1, 'response', 'mood disorde
 
 association('CYP2D6', 'NA', venlafaxine, 23545896, 1, 'side effects', 'OCD').
 
-association('FKBP5', rs4713916A, venlafaxine, 20709156, 1, 'response', 'mood disorder').
+association('FKBP5RsN', 'rs4713916A', venlafaxine, 20709156, 1, 'response', 'mood disorder').
 
 association('CYP2D9', '*5/*4', venlafaxine, 16958828, -1, 'side effects', 'depression').
 association('CYP2D9', '*6/*6', venlafaxine, 16958828, -1, 'side effects', 'depression').
@@ -437,7 +443,7 @@ association('MDR1', 'rs2235067T', venlafaxine, 18215618, 1, 'remission', 'depres
 
 association('CYP2D6', 'NA', venlafaxine, 24858822, -1, 'metabolism', 'elderly').
 
-association('FKBP5', rs3800373C, venlafaxine, 20709156, 1, 'response', 'mood disorder').
+association('FKBP5RsN', 'rs3800373C', venlafaxine, 20709156, 1, 'response', 'mood disorder').
 
 /*******************************************************************************
 vortioxetine
@@ -453,20 +459,45 @@ association('CYP2D9', '*3', zuclopenthixol, 12197620, -1, 'metabolism', 'NA').
 association('CYP2D9', '*4', zuclopenthixol, 12197620, -1, 'metabolism', 'NA').
 
 /*******************************************************************************
-RULES
+********************************************************************************
+**                                   RULES                                    **
+********************************************************************************
 *******************************************************************************/
-list_negative_effects(Drug, Allele, Matches):-findall((ID, N), (negative_effect(N),
-                                                      association(_, Allele, Drug, ID, 1, N, _)),
+
+/*Use With RS Numbers (Unique Across All Genes)*/
+list_negative_effects(Drug, RsN, Matches):-findall((ID, N), (negative_effect(N),
+                                                      association(_, RsN, Drug, ID, 1, N, _)),
                                                       Matches).
-list_positive_effects(Drug, Allele, Matches):-findall((ID, P), (positive_effect(P),
-                                                      association(_, Allele, Drug, ID, 1, P, _)),
+list_positive_effects(Drug, RsN, Matches):-findall((ID, P), (positive_effect(P),
+                                                      association(_, RsN, Drug, ID, 1, P, _)),
                                                       Matches).
 
-positive_effect_score(Drug, Allele, Count):-list_positive_effects(Drug, Allele, Matches),
+/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+list_negative_effects(Drug, Gene, Allele, Matches):-findall((ID, N), (negative_effect(N),
+                                                      association(Gene, Allele, Drug, ID, 1, N, _)),
+                                                      Matches).
+list_positive_effects(Drug, Gene, Allele, Matches):-findall((ID, P), (positive_effect(P),
+                                                      association(Gene, Allele, Drug, ID, 1, P, _)),
+                                                      Matches).
+
+/*Use With RS Numbers (Unique Across All Genes)*/
+positive_effect_score(Drug, RsN, Count):-list_positive_effects(Drug, RsN, Matches),
                                             length(Matches, Count).
-negative_effect_score(Drug, Allele, Count):-list_negative_effects(Drug, Allele, Matches),
+negative_effect_score(Drug, RsN, Count):-list_negative_effects(Drug, RsN, Matches),
                                             length(Matches, Count).
 
-recommendation(Drug, Allele, X):-negative_effect_score(Drug, Allele, CN),
-                                 (CN < 1, positive_effect_score(Drug, Allele, CP),
+/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+positive_effect_score(Drug, Gene, Allele, Count):-list_positive_effects(Drug, Gene, Allele, Matches),
+                                            length(Matches, Count).
+negative_effect_score(Drug, Gene, Allele, Count):-list_negative_effects(Drug, Gene, Allele, Matches),
+                                            length(Matches, Count).
+
+/*Use With RS Numbers (Unique Across All Genes)*/
+recommendation(Drug, RsN, X):-negative_effect_score(Drug, RsN, CN),
+                                 (CN < 1, positive_effect_score(Drug, RsN, CP),
+                                  CP > 0, X = 'yes'; CN > 0, X = 'no').
+
+/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+recommendation(Drug, Gene, Allele, X):-negative_effect_score(Drug, Gene, Allele, CN),
+                                 (CN < 1, positive_effect_score(Drug, Gene, Allele, CP),
                                   CP > 0, X = 'yes'; CN > 0, X = 'no').
