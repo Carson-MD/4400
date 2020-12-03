@@ -74,33 +74,41 @@ drug(bupropion).
 drug(chlordiazepoxide).
 drug(citalopram).
 drug(clomipramine).
+drug(clopidogrel).
 drug(clozapine).
 drug(desipramine).
 drug(diazepam).
 drug(doxepin).
 drug(escitalopram).
 drug(fluoxetine).
-drug(olanzapine).
 drug(fluvoxamine).
 drug(haloperidol).
 drug(iloperidone).
 drug(imipramine).
+drug(irbesartan).
+drug(metoprolol).
 drug(mirtazapine).
 drug(modafinil).
 drug(nefazodone).
 drug(nortriptyline).
 drug(olanzapine).
+drug(olanzapine).
+drug(omeprazole).
 drug(paroxetine).
 drug(perphenazine).
+drug(phenytoin).
 drug(pimozide).
 drug(protriptyline).
 drug(risperidone).
 drug(sertraline).
 drug(thioridazine).
+drug(tramadol).
 drug(trimipramine).
 drug(venlafaxine).
 drug(vortioxetine).
+drug(warfarin).
 drug(zuclopenthixol).
+
 
 /**************
 * CONDITIONS *
@@ -286,6 +294,62 @@ association('CYP2C19', '*2/*3', amitriptyline, 12172336, 1, 'concentration', 'NA
 association('MDR1', 'rs4148740G', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 /*******************************************************************************
+celecoxib
+*******************************************************************************/
+
+association('CYP2C9', '*1/*3', celecoxib, 12893985, -0.3, 'clearance', 'NA'). %IM
+association('CYP2C9', '*3/*3', celecoxib, 12893985, -0.7, 'clearance', 'NA'). %PM
+
+
+/*******************************************************************************
+clopidogrel
+*******************************************************************************/
+
+association('CYP2C19', '*1/*2', clopidogrel, 22428882, -0.401, 'clearance', 'NA'). %IM
+association('CYP2C19', '*1/*3', clopidogrel, 22428882, -0.401, 'clearance', 'NA'). %IM
+association('CYP2C19', '*2/*2', clopidogrel, 22428882, -0.66, 'clearance', 'NA'). %PM
+association('CYP2C19', '*2/*3', clopidogrel, 22428882, -0.66, 'clearance', 'NA'). %PM
+
+/*******************************************************************************
+irbesartan
+*******************************************************************************/
+
+association('CYP2C9', '*1/*3', irbesartan, 21842338, -0.393, 'clearance', 'NA'). %IM
+
+/*******************************************************************************
+metoprolol
+*******************************************************************************/
+
+association('CYP2D6', 'Unkown', metoprolol, 23665868, -0.326, 'clearance', 'NA'). %IM
+association('CYP2D6', 'Unkown', metoprolol, 23665868, -0.83, 'clearance', 'NA'). %PM
+association('CYP2D6', 'Unkown', metoprolol, 23665868, 1.603, 'clearance', 'NA'). %UM
+
+/*******************************************************************************
+omeprazole
+*******************************************************************************/
+
+association('CYP2C19', '*1/*2', omeprazole, 17875119, -0.373, 'clearance', 'NA'). %IM
+association('CYP2C19', '*2/*2', omeprazole, 17875119, -0.764, 'clearance', 'NA'). %PM
+association('CYP2C19', '*17/*17', omeprazole, 18294333, 0.271, 'clearance', 'NA'). %UM
+
+/*******************************************************************************
+phenytoin
+*******************************************************************************/
+
+association('CYP2C9', '*1/*3', phenytoin, 9860067, -0.439, 'clearance', 'NA'). %IM
+association('CYP2C9', '*1/*2', phenytoin, 11927841, -0.519, 'clearance', 'NA'). %IM
+association('CYP2C9', '*1/*3', phenytoin, 11668218, -0.568, 'clearance', 'NA'). %IM
+association('CYP2C9', '*2/*2', phenytoin, 11668218, -0.834, 'clearance', 'NA'). %PM
+association('CYP2C9', '*2/*3', phenytoin, 11668218, -0.886, 'clearance', 'NA'). %PM
+
+/*******************************************************************************
+tramadol
+*******************************************************************************/
+
+association('CYP2D6', 'Unknown', tramadol, 17570739, -0.312, 'clearance', 'NA'). %IM
+association('CYP2D6', 'Unknown', tramadol, 17570739, -0.827, 'clearance', 'NA'). %PM
+
+/*******************************************************************************
 venlafaxine
 *******************************************************************************/
 
@@ -452,6 +516,16 @@ vortioxetine
 /* NO SIGNIFICANT RESULTS */
 
 /*******************************************************************************
+warfarin
+*******************************************************************************/
+
+association('CYP2C9', '*1/*2', warfarin, 12496751, -0.424, 'clearance', 'NA'). %IM
+association('CYP2C9', '*1/*3', warfarin, 12496751, -0.477, 'clearance', 'NA'). %IM
+association('CYP2C9', '*2/*2', warfarin, 12496751, -0.677, 'clearance', 'NA'). %IM
+association('CYP2C9', '*2/*3', warfarin, 12496751, -0.765, 'clearance', 'NA'). %PM
+association('CYP2C9', '*3/*3', warfarin, 12496751, -0.908, 'clearance', 'NA'). %PM
+
+/*******************************************************************************
 zuclopenthixol
 *******************************************************************************/
 association('CYP2D9', '*1', zuclopenthixol, 12197620, 1, 'metabolism', 'NA').
@@ -463,7 +537,6 @@ association('CYP2D9', '*4', zuclopenthixol, 12197620, -1, 'metabolism', 'NA').
 **                                   RULES                                    **
 ********************************************************************************
 *******************************************************************************/
-
 /*Use With RS Numbers (Unique Across All Genes)*/
 list_negative_effects(Drug, RsN, Matches):-findall((ID, N), (negative_effect(N),
                                                       association(_, RsN, Drug, ID, 1, N, _)),
