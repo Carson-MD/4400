@@ -572,5 +572,6 @@ recommendation(Drug, Gene, Allele, X):-
 /*******************************************************************************
 Dose Rate
 *******************************************************************************/
-dose_rate_multiplier(Drug, Gene, Allele, Rate):-association(Gene, Allele, Drug, _, X, 'clearance', _),
-                                                Rate is 1 * (1 + X).
+dose_rate_multiplier(Drug, Gene, Allele, Rate):-
+  association(Gene, Allele, Drug, _, X, 'clearance', _),
+  Rate is 1 * (1 + X).
