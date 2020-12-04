@@ -554,6 +554,7 @@ list_effects(Drug, Gene, Allele, PM, NM):-
 effect_score(Drug, RsN, PC, NC):-
   list_effects(Drug, RsN, PM, NM), length(PM, PC), length(NM, NC).
 
+/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
 effect_score(Drug, Gene, Allele, PC, NC):-
   list_effects(Drug, Gene, Allele, PM, NM), length(PM, PC), length(NM, NC).
 
@@ -562,10 +563,10 @@ recommendation(Drug, RsN, X):-
   effect_score(Drug, RsN, PC, NC),
   (NC > 0, X = 'no'; PC > 0, X = 'yes'; NC == 0, PC == 0, X = 'neutral').
 
+/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
 recommendation(Drug, Gene, Allele, X):-
   effect_score(Drug, Gene, Allele, PC, NC),
   (NC > 0, X = 'no'; PC > 0, X = 'yes'; NC == 0, PC == 0, X = 'neutral').
-
 
 /*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
 /*******************************************************************************
