@@ -114,6 +114,7 @@ drug(zuclopenthixol).
 * CONDITIONS *
 ***************/
 
+condition('NA').
 condition('depression').
 condition('depressive disorder').
 condition('mood disorder').
@@ -133,7 +134,6 @@ effect('HAM-A reduction').
 effect('improvement').
 effect('levels').
 effect('metabolism').
-effect('chance of remission').
 effect('side effects').
 effect('response').
 effect('suicide').
@@ -147,10 +147,8 @@ effect('amitriptyline-nortriptyline ratio').
 * POSITIVE EFFECTS *
 ********************/
 positive_effect('improvement').
-positive_effect('chance of remission').
 positive_effect('remission').
 positive_effect('response').
-positive_effect('metabolism').
 
 /*******************
 * NEGATIVE EFFECTS *
@@ -320,9 +318,9 @@ association('CYP2C9', '*1/*3', irbesartan, 21842338, -0.393, 'clearance', 'NA').
 metoprolol
 *******************************************************************************/
 
-association('CYP2D6', 'Unkown', metoprolol, 23665868, -0.326, 'clearance', 'NA'). %IM
-association('CYP2D6', 'Unkown', metoprolol, 23665868, -0.83, 'clearance', 'NA'). %PM
-association('CYP2D6', 'Unkown', metoprolol, 23665868, 1.603, 'clearance', 'NA'). %UM
+association('CYP2D6', 'Unknown', metoprolol, 23665868, -0.326, 'clearance', 'NA'). %IM
+association('CYP2D6', 'Unknown', metoprolol, 23665868, -0.83, 'clearance', 'NA'). %PM
+association('CYP2D6', 'Unknown', metoprolol, 23665868, 1.603, 'clearance', 'NA'). %UM
 
 /*******************************************************************************
 omeprazole
@@ -543,14 +541,15 @@ Effects and Recommendations
 *******************************************************************************/
 
 /*Use With RS Numbers (Unique Across All Genes)*/
-list_negative_effects(Drug, RsN, Matches):-findall((ID, N), (negative_effect(N),
-                                                      association(_, RsN, Drug, ID, 1, N, _)),
-                                                      Matches).
-list_positive_effects(Drug, RsN, Matches):-findall((ID, P), (positive_effect(P),
-                                                      association(_, RsN, Drug, ID, 1, P, _)),
-                                                      Matches).
+list_effects(Drug, RsN, PM, NM):-
+  findall((ID, P), (positive_effect(P), association(_, RsN, Drug, ID, 1, P, _)), PM),
+  findall((ID, N), (negative_effect(N), association(_, RsN, Drug, ID, 1, N, _)), NM).
 
 /*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+list_effects(Drug, Gene, Allele, PM, NM):-
+  findall((ID, P), (positive_effect(P), association(Gene, Allele, Drug, ID, 1, P, _)), PM),
+  findall((ID, N), (negative_effect(N), association(Gene, Allele, Drug, ID, 1, N, _)), NM).
+
 list_negative_effects(Drug, Gene, Allele, Matches):-findall((ID, N), (negative_effect(N),
                                                       association(Gene, Allele, Drug, ID, 1, N, _)),
                                                       Matches).
