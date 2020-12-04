@@ -550,35 +550,24 @@ list_effects(Drug, Gene, Allele, PM, NM):-
   findall((ID, P), (positive_effect(P), association(Gene, Allele, Drug, ID, 1, P, _)), PM),
   findall((ID, N), (negative_effect(N), association(Gene, Allele, Drug, ID, 1, N, _)), NM).
 
-list_negative_effects(Drug, Gene, Allele, Matches):-findall((ID, N), (negative_effect(N),
-                                                      association(Gene, Allele, Drug, ID, 1, N, _)),
-                                                      Matches).
-list_positive_effects(Drug, Gene, Allele, Matches):-findall((ID, P), (positive_effect(P),
-                                                      association(Gene, Allele, Drug, ID, 1, P, _)),
-                                                      Matches).
+/*Use With RS Numbers (Unique Across All Genes)*/
+effect_score(Drug, RsN, PC, NC):-
+  list_effects(Drug, RsN, PM, NM), length(PM, PC), length(NM, NC).
+
+effect_score(Drug, Gene, Allele, PC, NC):-
+  list_effects(Drug, Gene, Allele, PM, NM), length(PM, PC), length(NM, NC).
 
 /*Use With RS Numbers (Unique Across All Genes)*/
-positive_effect_score(Drug, RsN, Count):-list_positive_effects(Drug, RsN, Matches),
-                                            length(Matches, Count).
-negative_effect_score(Drug, RsN, Count):-list_negative_effects(Drug, RsN, Matches),
-                                            length(Matches, Count).
+recommendation(Drug, RsN, X):-
+  effect_score(Drug, RsN, PC, NC),
+  (NC > 0, X = 'no'; PC > 0, X = 'yes'; NC == 0, PC == 0, X = 'neutral').
+
+recommendation(Drug, Gene, Allele, X):-
+  effect_score(Drug, Gene, Allele, PC, NC),
+  (NC > 0, X = 'no'; PC > 0, X = 'yes'; NC == 0, PC == 0, X = 'neutral').
+
 
 /*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
-positive_effect_score(Drug, Gene, Allele, Count):-list_positive_effects(Drug, Gene, Allele, Matches),
-                                            length(Matches, Count).
-negative_effect_score(Drug, Gene, Allele, Count):-list_negative_effects(Drug, Gene, Allele, Matches),
-                                            length(Matches, Count).
-
-/*Use With RS Numbers (Unique Across All Genes)*/
-recommendation(Drug, RsN, X):-negative_effect_score(Drug, RsN, CN),
-                                 (CN < 1, positive_effect_score(Drug, RsN, CP),
-                                  CP > 0, X = 'yes'; CN > 0, X = 'no').
-
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
-recommendation(Drug, Gene, Allele, X):-negative_effect_score(Drug, Gene, Allele, CN),
-                                 (CN < 1, positive_effect_score(Drug, Gene, Allele, CP),
-                                  CP > 0, X = 'yes'; CN > 0, X = 'no').
-
 /*******************************************************************************
 Dose Rate
 *******************************************************************************/
