@@ -60,6 +60,20 @@ gene('CYP2C9').
 gene('CYP2C19').
 gene('CYP1B1').
 gene('CYP3A5').
+gene('MDR1').
+gene('CYP2D9').
+gene('HTR2A').
+gene('FKBP5').
+gene('HTR1B').
+gene('COMT').
+gene('HTR7').
+gene('GABRQ').
+gene('SLC6A4').
+gene('TPH2').
+gene('GRIA1/3').
+gene('GRIA3').
+gene('SLC6A2').
+
 
 /********
 * DRUGS *
