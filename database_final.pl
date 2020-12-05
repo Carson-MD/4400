@@ -130,12 +130,17 @@ drug(zuclopenthixol).
 
 condition('NA').
 condition('depression').
-condition('depressive disorder').
+condition('depressive disorder'). //What is the difference between depression & depressive disorder
 condition('mood disorder').
-condition('anxiety disorder').
-condition('obsessive compulsive disorder').
+condition('anxiety').
+condition('anxiety disorder'). //What is the difference between anxiety & anxiety disorder?
+condition('OCD').
+condition('obsessive compulsive disorder'). //What is the difference between OCD & obsessive compulsive disorder?
 condition('schizophrenia').
-condition('healthy individual').
+condition('healthy').
+condition('healthy individual'). ////What is the difference between healthy & healthy individual
+condition('elderly').
+
 
 /*******************
 * EFFECTS *
