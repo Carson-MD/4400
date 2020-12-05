@@ -151,16 +151,23 @@ effect('clearance').
 effect('dose').
 effect('HAM-A reduction').
 effect('improvement').
-effect('levels').
+effect('levels'). //what is levels?
+effect('level') //why do we have level and levels?
 effect('metabolism').
 effect('side effects').
+effect('risk of side effects') //why side effects and risk of side effects?
 effect('response').
 effect('suicide').
+effect('suicide risk'). //why suicide & suicide risk?
 effect('drug toxicity').
 effect('discontinuation').
 effect('plasma nortriptyline').
 effect('remission').
 effect('amitriptyline-nortriptyline ratio').
+effect('concentration').
+effect('plasma levels').
+effect('Cmax and AUC').
+effect('toxicity').
 
 /*******************
 * POSITIVE EFFECTS *
