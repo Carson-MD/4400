@@ -130,15 +130,11 @@ drug(zuclopenthixol).
 
 condition('NA').
 condition('depression').
-condition('depressive disorder'). //What is the difference between depression & depressive disorder
 condition('mood disorder').
 condition('anxiety').
-condition('anxiety disorder'). //What is the difference between anxiety & anxiety disorder?
 condition('OCD').
-condition('obsessive compulsive disorder'). //What is the difference between OCD & obsessive compulsive disorder?
 condition('schizophrenia').
 condition('healthy').
-condition('healthy individual'). ////What is the difference between healthy & healthy individual
 condition('elderly').
 
 
@@ -146,28 +142,23 @@ condition('elderly').
 * EFFECTS *
 ********************/
 effect('adverse effects').
-effect('blood concentration'). //can't decide positive or negative need rate
-effect('clearance'). //can't decide positive or negative need rate 
-effect('dose'). //can't decide positive or negative need rate 
+effect('blood concentration').
+effect('clearance').
+effect('dose').
 effect('HAM-A reduction').
-effect('improvement'). // I did not see improvement in the data I saw 6 month improvement
-effect('6 month improvement'). //why improvemen and 6 month improvement? 
-effect('levels'). //what is levels?
-effect('level') //why do we have level and levels?
-effect('metabolism'). //can't decide positive or negative need rate 
+effect('improvement').
+effect('levels').
+effect('metabolism').
 effect('side effects').
-effect('risk of side effects') //why side effects and risk of side effects?
 effect('response').
 effect('suicide').
-effect('suicide risk'). //why suicide & suicide risk?
-effect('drug toxicity').
-effect('toxicity'). //are toxicity and drug toxicity diffrent?
-effect('discontinuation'). //can't decide positive or negative
-effect('plasma nortriptyline'). //can't decide positive or negative need rate 
+effect('toxicity').
+effect('discontinuation'). 
+effect('plasma nortriptyline').
 effect('remission').
-effect('amitriptyline-nortriptyline ratio'). //can't decide positive or negative need rate 
+effect('amitriptyline-nortriptyline ratio').
 effect('concentration').
-effect('plasma levels'). //can't decide positive or negative need rate 
+effect('plasma levels').
 effect('Cmax and AUC').
 
 
@@ -185,10 +176,7 @@ positive_effect('HAM-A reduction').
 ********************/
 negative_effect('adverse effects').
 negative_effect('side effects').
-negative_effect('risk of side effects').
-negative_effect('drug toxicity').
 negative_effect('suicide').
-negative_effect('suicide risk').
 negative_effect('toxicity').
 
 /***************
@@ -257,10 +245,10 @@ association('CYP2C19', 'rs4244285AA', amitriptyline, 20531370, 1, 'plasma levels
 
 association('CYP2D6', 'rs3892097TT', amitriptyline, 18070221, 1, 'side effects', 'NA').
 
-association('CYP2D9', '*3', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*4', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*5', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*6', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
+association('CYP2D9', '*3', amitriptyline, 8941025, 1, 'toxicity', 'NA').
+association('CYP2D9', '*4', amitriptyline, 8941025, 1, 'toxicity', 'NA').
+association('CYP2D9', '*5', amitriptyline, 8941025, 1, 'toxicity', 'NA').
+association('CYP2D9', '*6', amitriptyline, 8941025, 1, 'toxicity', 'NA').
 
 association('CYP2C19', '*2/*2', amitriptyline, 12012142, 1, 'concentration', 'NA').
 association('CYP2C19', '*2/*3', amitriptyline, 12012142, 1, 'concentration', 'NA').
@@ -269,27 +257,27 @@ association('CYP2C19', '*1/*2', amitriptyline, 12012142, -1, 'concentration', 'N
 
 association('MDR1', 'rs11983225C', amitriptyline, 18215618, 1, 'remission', 'depression').
 
-association('CYP2D9', '*1/*4', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*4', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*5', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*4/*41', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*4/*10', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*1/*1', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*1/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*1', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*1/*41', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*1/*10', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*41', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
+association('CYP2D9', '*1/*4', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*4', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*5', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*4/*41', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*4/*10', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*1/*1', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*1/*2', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*1', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*2', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*1/*41', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*1/*10', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*41', amitriptyline, 15590749, -1, 'toxicity', 'NA').
 
 association('MDR1', 'rs2032583AG', amitriptyline, 18215618, 1, 'remission', 'depression').
 association('MDR1', 'rs2032583GG', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 association('MDR1', 'rs4148739C', amitriptyline, 18215618, 1, 'remission', 'depression').
 
-association('CYP2C19', '*1/*1', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2C19', '*2/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2C19', '*1/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
+association('CYP2C19', '*1/*1', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2C19', '*2/*2', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2C19', '*1/*2', amitriptyline, 15590749, -1, 'toxicity', 'NA').
 
 association('CYP2D6', 'NA', amitriptyline, 16129989, -1, 'response', 'NA').
 
@@ -318,7 +306,7 @@ association('CYP2C19', 'rs4244285AA', amitriptyline, 16044105, 1, 'amitriptyline
 
 association('CYP2C19', '*1/*2', amitriptyline, 15205367, 1, 'concentration', 'NA').
 
-association('CYP2D9', '*4/*4', amitriptyline, 18070221, 1, 'risk of side effects', 'NA').
+association('CYP2D9', '*4/*4', amitriptyline, 18070221, 1, 'side effects', 'NA').
 
 association('CYP2C19', '*2/*3', amitriptyline, 12172336, 1, 'concentration', 'NA').
 
@@ -386,7 +374,7 @@ venlafaxine
 
 association('MDR1', 'rs4148740G', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('FKBP5', 'rs1360780T', venlafaxine, 21449676, 1, 'suicide risk', 'depression').
+association('FKBP5', 'rs1360780T', venlafaxine, 21449676, 1, 'suicide', 'depression').
 
 association('HTR2A', 'rs7997012AG', venlafaxine, 22006095, 1, 'response', 'NA').
 association('HTR2A', 'rs7997012GG', venlafaxine, 22006095, 1, 'response', 'NA').
@@ -401,7 +389,7 @@ association('CYP2D6', 'NA', venlafaxine, 24858822, -1, 'metabolism', 'NA').
 
 association('MDR1', 'rs7787082A', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('HTR1B', 'rs130058A', venlafaxine, 21449676, -1, 'suicide risk', 'depression').
+association('HTR1B', 'rs130058A', venlafaxine, 21449676, -1, 'suicide', 'depression').
 
 association('CYP2D9', '*2', venlafaxine, 26406933, -1, 'clearance', 'NA').
 association('CYP2D9', '*10', venlafaxine, 26406933, -1, 'clearance', 'NA').
@@ -435,15 +423,15 @@ association('HTR7', 'rs7905446GT', venlafaxine, 30874608, 1, 'response', 'depres
 
 association('CYP2D6', 'NA', venlafaxine, 24858822, -1, 'metabolism', 'elderly').
 
-association('MDR1', 'rs2032582A', venlafaxine, 21449676, 1, 'suicide risk', 'depression').
+association('MDR1', 'rs2032582A', venlafaxine, 21449676, 1, 'suicide', 'depression').
 
-association('HTR2A', 'rs7997012AG', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
-association('HTR2A', 'rs7997012GG', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
-association('HTR2A', 'rs7997012AA', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
+association('HTR2A', 'rs7997012AG', venlafaxine, 22006095, 1, 'improvement', 'anxiety').
+association('HTR2A', 'rs7997012GG', venlafaxine, 22006095, 1, 'improvement', 'anxiety').
+association('HTR2A', 'rs7997012AA', venlafaxine, 22006095, 1, 'improvement', 'anxiety').
 
 association('MDR1', 'rs11983225C', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('CYP2D9', '*4/*4', venlafaxine, 10774634, 1, 'level', 'depression').
+association('CYP2D9', '*4/*4', venlafaxine, 10774634, 1, 'levels', 'depression').
 
 association('CYP2D6', 'NA', venlafaxine, 24858822, 1, 'metabolism', 'elderly').
 
