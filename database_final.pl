@@ -146,28 +146,30 @@ condition('elderly').
 * EFFECTS *
 ********************/
 effect('adverse effects').
-effect('blood concentration').
-effect('clearance').
-effect('dose').
+effect('blood concentration'). //can't decide positive or negative need rate
+effect('clearance'). //can't decide positive or negative need rate 
+effect('dose'). //can't decide positive or negative need rate 
 effect('HAM-A reduction').
-effect('improvement').
+effect('improvement'). // I did not see improvement in the data I saw 6 month improvement
+effect('6 month improvement'). //why improvemen and 6 month improvement? 
 effect('levels'). //what is levels?
 effect('level') //why do we have level and levels?
-effect('metabolism').
+effect('metabolism'). //can't decide positive or negative need rate 
 effect('side effects').
 effect('risk of side effects') //why side effects and risk of side effects?
 effect('response').
 effect('suicide').
 effect('suicide risk'). //why suicide & suicide risk?
 effect('drug toxicity').
-effect('discontinuation').
-effect('plasma nortriptyline').
+effect('toxicity'). //are toxicity and drug toxicity diffrent?
+effect('discontinuation'). //can't decide positive or negative
+effect('plasma nortriptyline'). //can't decide positive or negative need rate 
 effect('remission').
-effect('amitriptyline-nortriptyline ratio').
+effect('amitriptyline-nortriptyline ratio'). //can't decide positive or negative need rate 
 effect('concentration').
-effect('plasma levels').
+effect('plasma levels'). //can't decide positive or negative need rate 
 effect('Cmax and AUC').
-effect('toxicity').
+
 
 /*******************
 * POSITIVE EFFECTS *
@@ -175,14 +177,19 @@ effect('toxicity').
 positive_effect('improvement').
 positive_effect('remission').
 positive_effect('response').
+positive_effect('HAM-A reduction').
+
 
 /*******************
 * NEGATIVE EFFECTS *
 ********************/
 negative_effect('adverse effects').
 negative_effect('side effects').
+negative_effect('risk of side effects').
 negative_effect('drug toxicity').
 negative_effect('suicide').
+negative_effect('suicide risk').
+negative_effect('toxicity').
 
 /***************
 * ASSOCIATIONS *
@@ -299,10 +306,10 @@ association('CYP2C19', '*1/*3', amitriptyline, 12172336, 1, 'amitriptyline-nortr
 association('CYP2C19', '*2/*3', amitriptyline, 12172336, 1, 'amitriptyline-nortriptyline ratio', 'NA').
 
 association('CYP2D9', '*4/*5', amitriptyline, 16024198, -1, 'metabolism', 'NA').
-association('CYP2D9', '*4/*4', amitriptyline, 16024198, -1, 'metabloism', 'NA').
+association('CYP2D9', '*4/*4', amitriptyline, 16024198, -1, 'metabolism', 'NA').
 association('CYP2D9', '*9', amitriptyline, 16024198, 1, 'metabolism', 'NA').
 association('CYP2D9', '*10', amitriptyline, 16024198, 1, 'metabolism', 'NA').
-association('CYP2D9', '*1', amitriptyline, 16024198, 1, 'metabloism', 'NA').
+association('CYP2D9', '*1', amitriptyline, 16024198, 1, 'metabolism', 'NA').
 association('CYP2D9', '*2', amitriptyline, 16024198, 1, 'metabolism', 'NA').
 
 association('MDR1', 'rs10280101C', amitriptyline, 18215618, 1, 'remission', 'depression').
