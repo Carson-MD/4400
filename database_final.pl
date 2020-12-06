@@ -579,7 +579,7 @@ list_effects(Drug, RsN, PM, NM):-
   findall((ID, N), (negative_effect(N), association(_, RsN, Drug, ID, 1, N, _)), NM).
 
 /*
-* Functor: list_effects Allele
+* Functor: list_effects  Star Notation
 * Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele
 * Use with: Star Notation for Allele's (Not Unique Across All Genes) 
 * Sample Inputoutput:
@@ -610,7 +610,7 @@ effect_score(Drug, RsN, PC, NC):-
   list_effects(Drug, RsN, PM, NM), length(PM, PC), length(NM, NC).
 
 /* 
-*Functor: effect_score Allele
+*Functor: effect_score  Star Notation
 * Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele
 * Use with: Star Notation 'for' Allele's (Not Unique Across All Genes) 
 * Sample Inputoutput:
@@ -640,7 +640,7 @@ recommendation(Drug, RsN, X):-
 
 
 /*
-* Functor: recommendation Allele
+* Functor: recommendation Star Notation
 * Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Allele
 * Use with: Star Notation for Allele's (Not Unique Across All Genes)
 * Sample Inputoutput:
@@ -658,7 +658,7 @@ Dose Rate
 *******************************************************************************/
 
 /*
-* Functor: dose_rate_multiplier Allele
+* Functor: dose_rate_multiplier Star Notation
 * Purpose: To calculate the appropriate drug does based on gene and clearance rate
 * Use with: Star Notation for Allele's (Not Unique Across All Genes)
 * Sample Inputoutput:
@@ -670,3 +670,17 @@ Dose Rate
 dose_rate_multiplier(Drug, Gene, Allele, Rate):-
   association(Gene, Allele, Drug, _, X, 'clearance', _),
   Rate is 1 * (1 + X).
+
+/*
+* Functor: listcondition
+* Purpose: To show the conditions associated with a certain drug and a specific gene with Allele
+* Use with: Star Notation or RsN for Allele's
+* Sample Inputoutput:
+* Input: listcondition(venlafaxine, 'CYP2D9', '*3', Condition).
+* Output:Condition = depression ? ;
+* Input: istcondition(venlafaxine, 'SLC6A4', 'rs25531TT', Condition).
+* Output: Condition = anxiety ? 
+*/
+
+listcondition(Drug, Gene, Allele, Condition):-
+  association(Gene, Allele, Drug, _, X, _, Condition).
