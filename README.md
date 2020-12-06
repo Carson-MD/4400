@@ -6,7 +6,7 @@ associated(variant, drug, pubID, adjective (inc-dec), 'attribute').
 
 HOW TO USE (SO FAR):
 
-Check if drug is in the database:
+**Check if drug is in the database:**\n
 drug(amitriptyline).
 >>return TRUE.
 drug(X).
