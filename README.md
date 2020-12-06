@@ -72,17 +72,48 @@ association(A< B, C, D, E, F, G).
 *VERSION 1*<br />
 Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN<br />
 Use with: RS Numbers (Unique Across All Genes) <br />
-Sample Inputoutput:<br />
+Sample Input / Output:<br />
 Input: list_effects(venlafaxine, rs12720067T, PM, NM).<br />
 Output:<br />
 NM = []<br />
-PM = [(18215618,remission)]<br />
+PM = [(18215618,remission)]
 
 *VERSION 2* <br />
 Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele<br />
 Use with: Star Notation for Allele's (Not Unique Across All Genes) <br />
-Sample Inputoutput:<br />
+Sample Input / Output:<br />
 nput: list_effects(warfarin,'CYP2C9', '*1/*2', PM, NM).<br />
 Output:<br />
 NM = [(15590749,concentration),(12172336,concentration),(28296334,concentration),(20531370,concentration),(12012142,concentration)]<br />
-PM = []<br />
+PM = []
+
+**2) <<effect_score()>>Score a gene-drug combination based on the number of positive and negative effects**
+
+*VERSION 1*<br />
+
+Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN<br />
+Use with: RS Numbers (Unique Across All Genes) <br />
+Sample Input / Output:<br />
+Input: effect_score(venlafaxine, rs4680GG, PC, NC).<br />
+Output:<br />
+NC = 0<br />
+PC = 1
+
+*VERSION 2*<br />
+
+Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele<br />
+Use with: Star Notation 'for' Allele's (Not Unique Across All Genes) <br />
+Sample Input / Output:<br />
+Input: effect_score(venlafaxine,'CYP2D9', '*3', PC, NC).<br />
+Output:<br />
+NC = 1<br />
+PC = 0
+
+**3) <<recommendation()>>Give a recommendation regarding a gene-drug combination (based on positive and negative associations).**
+
+Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Allele<br />
+Use with: Star Notation for Allele's (Not Unique Across All Genes)<br />
+Sample Input / Output:<br />
+Input: recommendation(venlafaxine,'CYP2D9', '*3', X).<br />
+Output:<br />
+X = no
