@@ -120,19 +120,19 @@ X = no
 
 **4) <<list_condition()>>List all conditions associated with a drug-gene combination.**
 
-Purpose: To show the conditions associated with a certain drug and a specific gene with Allele
-Use with: Star Notation or RsN for Allele's
-Sample Input / Output:
-Input: list_condition(venlafaxine, 'CYP2D9', '*3', Condition).
-Output:Condition = depression ? ;
-Input: list_condition(venlafaxine, 'SLC6A4', 'rs25531TT', Condition).
-Output: Condition = anxiety ?
+Purpose: To show the conditions associated with a certain drug and a specific gene with Allele<br />
+Use with: Star Notation or RsN for Allele's<br />
+Sample Input / Output:<br />
+Input: list_condition(venlafaxine, 'CYP2D9', '*3', Condition).<br />
+Output:Condition = depression ? ;<br />
+Input: list_condition(venlafaxine, 'SLC6A4', 'rs25531TT', Condition).<br />
+Output: Condition = anxiety ?<br />
 
 **5) <<dose_rate_multiplier>>Output the increase or decrease to dose rate that should be applied for a given gene-drug combination.**
 
-Purpose: To calculate the appropriate drug does based on gene and clearance rate
-Use with: Star Notation for Allele's (Not Unique Across All Genes)
-Sample Input / Output:
-Input: dose_rate_multiplier(omeprazole,'CYP2C19', '*1*2', X).
-Output:
+Purpose: To calculate the appropriate drug does based on gene and clearance rate<br />
+Use with: Star Notation for Allele's (Not Unique Across All Genes)<br />
+Sample Input / Output:<br />
+Input: dose_rate_multiplier(omeprazole,'CYP2C19', '*1*2', X).<br />
+Output:<br />
 Rate = 0.627
