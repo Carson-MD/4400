@@ -2,9 +2,9 @@
 
 VERSION: GNU Prolog (version gprolog-1.4.5)
 
-##Instructions for Use
+## Instructions for Use
 
-###Facts
+### Facts
 
 **1) Check if drug is in the database:**
 
@@ -65,6 +65,6 @@ association('MDR1', 'rs2235067T', amitriptyline, 18215618, 1, 'remission', 'depr
 association(A< B, C, D, E, F, G).
 >>return all associations.
 
-###Rules
+### Rules
 
-**1) adf
+**1) adf**
