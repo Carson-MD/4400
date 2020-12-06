@@ -1,45 +1,8 @@
 /******************************************************************************
 COMP 4400 - PROJECT
-NAMES: Carson Dickie | Ahmed Shafeek
-DATE: 2020-10-25
-
-FORMAT:
-association(variant, drug, pubID, adjective (inc-dec), 'attribute').
-
-BRAINSTORM:
-bestMed(Allele, condition, Med, pubId):- treats(Med, condition),positivelyassociation(Allele, Med, pubId).
-wrst_Med(Allele, condition, Med, pubId):- treats(Med, condition),negativelyassociation(Allele, Med, pubId).
-association(Allele, Med, pubId, IncDec, Param).
-
-HOW TO USE (SO FAR):
-
-1) Check if drug is in the database:
-drug(amitriptyline).
->>return TRUE.
-drug(X).
->>return all drugs in the database.
-
-2) Check if condition is in the database:
-condition(Depression).
->>return TRUE.
-condition(X).
->>return all conditions in the database.
-
-3) Check for associations:
-FORMAT
-association(gene_variant, drug, pubmed_ID, +_-, details).
-gene_variant - the gene variant of interest
-drug - the drug of interest
-pubmed_ID - the pubmed ID for the paper in which the association was identified
-+_- - the direction of the association
-details - the details of the association
-EXAMPLE
-association('CYP2C19', '*1/*2', amitriptyline, X, Y, Z).
->>X = 15590749
-  Y = +
-  Z = 'concentration'
-  ...(plus additional matches)
-*******************************************************************************/
+NAMES: Lama Khalil |Carson Dickie | Ahmed Shafeek
+DATE: 2020-12-06
+******************************************************************************/
 
 /*******************************************************************************
 ********************************************************************************
@@ -60,6 +23,20 @@ gene('CYP2C9').
 gene('CYP2C19').
 gene('CYP1B1').
 gene('CYP3A5').
+gene('MDR1').
+gene('CYP2D9').
+gene('HTR2A').
+gene('FKBP5').
+gene('HTR1B').
+gene('COMT').
+gene('HTR7').
+gene('GABRQ').
+gene('SLC6A4').
+gene('TPH2').
+gene('GRIA1/3').
+gene('GRIA3').
+gene('SLC6A2').
+
 
 /********
 * DRUGS *
@@ -116,12 +93,13 @@ drug(zuclopenthixol).
 
 condition('NA').
 condition('depression').
-condition('depressive disorder').
 condition('mood disorder').
-condition('anxiety disorder').
-condition('obsessive compulsive disorder').
+condition('anxiety').
+condition('OCD').
 condition('schizophrenia').
-condition('healthy individual').
+condition('healthy').
+condition('elderly').
+
 
 /*******************
 * EFFECTS *
@@ -137,11 +115,15 @@ effect('metabolism').
 effect('side effects').
 effect('response').
 effect('suicide').
-effect('drug toxicity').
-effect('discontinuation').
+effect('toxicity').
+effect('discontinuation'). 
 effect('plasma nortriptyline').
 effect('remission').
 effect('amitriptyline-nortriptyline ratio').
+effect('concentration').
+effect('plasma levels').
+effect('Cmax and AUC').
+
 
 /*******************
 * POSITIVE EFFECTS *
@@ -149,22 +131,26 @@ effect('amitriptyline-nortriptyline ratio').
 positive_effect('improvement').
 positive_effect('remission').
 positive_effect('response').
+positive_effect('HAM-A reduction').
+
 
 /*******************
 * NEGATIVE EFFECTS *
 ********************/
 negative_effect('adverse effects').
 negative_effect('side effects').
-negative_effect('drug toxicity').
 negative_effect('suicide').
+negative_effect('toxicity').
 
 /***************
 * ASSOCIATIONS *
 ****************/
 
-/*******************************************************************************
+/*****************************************************************************************
 amitritypline
-*******************************************************************************/
+******************************************************************************************
+            *Gene*     *Allele*  *Drug*        *PubMid*  *%*   *effect*      *concentration*
+******************************************************************************************/
 association('CYP2C19', '*1/*2', amitriptyline, 15590749, 1, 'concentration', 'NA').
 association('CYP2C19', '*2/*2', amitriptyline, 15590749, 1, 'concentration', 'NA').
 
@@ -224,10 +210,10 @@ association('CYP2C19', 'rs4244285AA', amitriptyline, 20531370, 1, 'plasma levels
 
 association('CYP2D6', 'rs3892097TT', amitriptyline, 18070221, 1, 'side effects', 'NA').
 
-association('CYP2D9', '*3', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*4', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*5', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*6', amitriptyline, 8941025, 1, 'drug toxicity', 'NA').
+association('CYP2D9', '*3', amitriptyline, 8941025, 1, 'toxicity', 'NA').
+association('CYP2D9', '*4', amitriptyline, 8941025, 1, 'toxicity', 'NA').
+association('CYP2D9', '*5', amitriptyline, 8941025, 1, 'toxicity', 'NA').
+association('CYP2D9', '*6', amitriptyline, 8941025, 1, 'toxicity', 'NA').
 
 association('CYP2C19', '*2/*2', amitriptyline, 12012142, 1, 'concentration', 'NA').
 association('CYP2C19', '*2/*3', amitriptyline, 12012142, 1, 'concentration', 'NA').
@@ -236,27 +222,27 @@ association('CYP2C19', '*1/*2', amitriptyline, 12012142, -1, 'concentration', 'N
 
 association('MDR1', 'rs11983225C', amitriptyline, 18215618, 1, 'remission', 'depression').
 
-association('CYP2D9', '*1/*4', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*4', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*5', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*4/*41', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*4/*10', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2D9', '*1/*1', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*1/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*1', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*1/*41', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*1/*10', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2D9', '*2/*41', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
+association('CYP2D9', '*1/*4', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*4', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*5', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*4/*41', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*4/*10', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2D9', '*1/*1', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*1/*2', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*1', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*2', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*1/*41', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*1/*10', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2D9', '*2/*41', amitriptyline, 15590749, -1, 'toxicity', 'NA').
 
 association('MDR1', 'rs2032583AG', amitriptyline, 18215618, 1, 'remission', 'depression').
 association('MDR1', 'rs2032583GG', amitriptyline, 18215618, 1, 'remission', 'depression').
 
 association('MDR1', 'rs4148739C', amitriptyline, 18215618, 1, 'remission', 'depression').
 
-association('CYP2C19', '*1/*1', amitriptyline, 15590749, 1, 'drug toxicity', 'NA').
-association('CYP2C19', '*2/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
-association('CYP2C19', '*1/*2', amitriptyline, 15590749, -1, 'drug toxicity', 'NA').
+association('CYP2C19', '*1/*1', amitriptyline, 15590749, 1, 'toxicity', 'NA').
+association('CYP2C19', '*2/*2', amitriptyline, 15590749, -1, 'toxicity', 'NA').
+association('CYP2C19', '*1/*2', amitriptyline, 15590749, -1, 'toxicity', 'NA').
 
 association('CYP2D6', 'NA', amitriptyline, 16129989, -1, 'response', 'NA').
 
@@ -273,10 +259,10 @@ association('CYP2C19', '*1/*3', amitriptyline, 12172336, 1, 'amitriptyline-nortr
 association('CYP2C19', '*2/*3', amitriptyline, 12172336, 1, 'amitriptyline-nortriptyline ratio', 'NA').
 
 association('CYP2D9', '*4/*5', amitriptyline, 16024198, -1, 'metabolism', 'NA').
-association('CYP2D9', '*4/*4', amitriptyline, 16024198, -1, 'metabloism', 'NA').
+association('CYP2D9', '*4/*4', amitriptyline, 16024198, -1, 'metabolism', 'NA').
 association('CYP2D9', '*9', amitriptyline, 16024198, 1, 'metabolism', 'NA').
 association('CYP2D9', '*10', amitriptyline, 16024198, 1, 'metabolism', 'NA').
-association('CYP2D9', '*1', amitriptyline, 16024198, 1, 'metabloism', 'NA').
+association('CYP2D9', '*1', amitriptyline, 16024198, 1, 'metabolism', 'NA').
 association('CYP2D9', '*2', amitriptyline, 16024198, 1, 'metabolism', 'NA').
 
 association('MDR1', 'rs10280101C', amitriptyline, 18215618, 1, 'remission', 'depression').
@@ -285,7 +271,7 @@ association('CYP2C19', 'rs4244285AA', amitriptyline, 16044105, 1, 'amitriptyline
 
 association('CYP2C19', '*1/*2', amitriptyline, 15205367, 1, 'concentration', 'NA').
 
-association('CYP2D9', '*4/*4', amitriptyline, 18070221, 1, 'risk of side effects', 'NA').
+association('CYP2D9', '*4/*4', amitriptyline, 18070221, 1, 'side effects', 'NA').
 
 association('CYP2C19', '*2/*3', amitriptyline, 12172336, 1, 'concentration', 'NA').
 
@@ -353,7 +339,7 @@ venlafaxine
 
 association('MDR1', 'rs4148740G', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('FKBP5', 'rs1360780T', venlafaxine, 21449676, 1, 'suicide risk', 'depression').
+association('FKBP5', 'rs1360780T', venlafaxine, 21449676, 1, 'suicide', 'depression').
 
 association('HTR2A', 'rs7997012AG', venlafaxine, 22006095, 1, 'response', 'NA').
 association('HTR2A', 'rs7997012GG', venlafaxine, 22006095, 1, 'response', 'NA').
@@ -368,7 +354,7 @@ association('CYP2D6', 'NA', venlafaxine, 24858822, -1, 'metabolism', 'NA').
 
 association('MDR1', 'rs7787082A', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('HTR1B', 'rs130058A', venlafaxine, 21449676, -1, 'suicide risk', 'depression').
+association('HTR1B', 'rs130058A', venlafaxine, 21449676, -1, 'suicide', 'depression').
 
 association('CYP2D9', '*2', venlafaxine, 26406933, -1, 'clearance', 'NA').
 association('CYP2D9', '*10', venlafaxine, 26406933, -1, 'clearance', 'NA').
@@ -402,15 +388,15 @@ association('HTR7', 'rs7905446GT', venlafaxine, 30874608, 1, 'response', 'depres
 
 association('CYP2D6', 'NA', venlafaxine, 24858822, -1, 'metabolism', 'elderly').
 
-association('MDR1', 'rs2032582A', venlafaxine, 21449676, 1, 'suicide risk', 'depression').
+association('MDR1', 'rs2032582A', venlafaxine, 21449676, 1, 'suicide', 'depression').
 
-association('HTR2A', 'rs7997012AG', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
-association('HTR2A', 'rs7997012GG', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
-association('HTR2A', 'rs7997012AA', venlafaxine, 22006095, 1, '6 month improvement', 'anxiety').
+association('HTR2A', 'rs7997012AG', venlafaxine, 22006095, 1, 'improvement', 'anxiety').
+association('HTR2A', 'rs7997012GG', venlafaxine, 22006095, 1, 'improvement', 'anxiety').
+association('HTR2A', 'rs7997012AA', venlafaxine, 22006095, 1, 'improvement', 'anxiety').
 
 association('MDR1', 'rs11983225C', venlafaxine, 18215618, 1, 'remission', 'depression').
 
-association('CYP2D9', '*4/*4', venlafaxine, 10774634, 1, 'level', 'depression').
+association('CYP2D9', '*4/*4', venlafaxine, 10774634, 1, 'levels', 'depression').
 
 association('CYP2D6', 'NA', venlafaxine, 24858822, 1, 'metabolism', 'elderly').
 
@@ -540,38 +526,122 @@ association('CYP2D9', '*4', zuclopenthixol, 12197620, -1, 'metabolism', 'NA').
 Effects and Recommendations
 *******************************************************************************/
 
-/*Use With RS Numbers (Unique Across All Genes)*/
+/*
+* Functor: list_effects RsN
+* Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN Allele
+* Use with: RS Numbers (Unique Across All Genes) 
+* Sample Input Output:
+* Input: list_effects(venlafaxine, rs12720067T, PM, NM).
+* Output:
+* NM = []
+* PM = [(18215618,remission)]
+*/
+
 list_effects(Drug, RsN, PM, NM):-
   findall((ID, P), (positive_effect(P), association(_, RsN, Drug, ID, 1, P, _)), PM),
   findall((ID, N), (negative_effect(N), association(_, RsN, Drug, ID, 1, N, _)), NM).
 
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+/*
+* Functor: list_effects Star Notation
+* Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Star Notation Allele
+* Use with: Star Notation for Allele's (Not Unique Across All Genes) 
+* Sample Input Output:
+* Input: list_effects(warfarin,'CYP2C9', '*1/*2', PM, NM).
+* Output:
+* NM = [(15590749,concentration),(12172336,concentration),(28296334,concentration),(20531370,concentration),(12012142,concentration)]
+* PM = []
+*/
+
 list_effects(Drug, Gene, Allele, PM, NM):-
   findall((ID, P), (positive_effect(P), association(Gene, Allele, Drug, ID, 1, P, _)), PM),
   findall((ID, N), (negative_effect(N), association(Gene, Allele, Drug, ID, 1, N, _)), NM).
 
-/*Use With RS Numbers (Unique Across All Genes)*/
+
+
+/*
+* Functor: effect_score RsN
+* Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN Allele
+* Use with: RS Numbers (Unique Across All Genes) 
+* Sample Input Output:
+* Input: effect_score(venlafaxine, rs4680GG, PC, NC).
+* Output:
+* NC = 0
+* PC = 1
+*/
+
 effect_score(Drug, RsN, PC, NC):-
   list_effects(Drug, RsN, PM, NM), length(PM, PC), length(NM, NC).
 
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+/* 
+*Functor: effect_score Star Notation
+* Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Star Notation Allele
+* Use with: Star Notation 'for' Allele's (Not Unique Across All Genes) 
+* Sample Input Output:
+* Input: effect_score(venlafaxine,'CYP2D9', '*3', PC, NC).
+* Output:
+* NC = 1
+* PC = 0
+*/
+
 effect_score(Drug, Gene, Allele, PC, NC):-
   list_effects(Drug, Gene, Allele, PM, NM), length(PM, PC), length(NM, NC).
+  
 
-/*Use With RS Numbers (Unique Across All Genes)*/
+/*
+* Functor: recommendation RsN
+* Purpose: To recommend certain medication based on the positive and negative effects ratio for a specific gene with RsN Allele
+* Use with: RS Numbers (Unique Across All Genes) 
+* Sample Input Output:
+* Input: recommendation(venlafaxine, rs4680GG, X).
+* Output:
+* X = yes
+*/
+
 recommendation(Drug, RsN, X):-
   effect_score(Drug, RsN, PC, NC),
   (NC > 0, X = 'no'; PC > 0, X = 'yes'; NC == 0, PC == 0, X = 'neutral').
 
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+
+/*
+* Functor: recommendation Star Notation
+* Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Star Notation Allele
+* Use with: Star Notation for Allele's (Not Unique Across All Genes)
+* Sample Input Output:
+* Input: recommendation(venlafaxine,'CYP2D9', '*3', X).
+* Output:
+* X = no
+*/
+
 recommendation(Drug, Gene, Allele, X):-
   effect_score(Drug, Gene, Allele, PC, NC),
   (NC > 0, X = 'no'; PC > 0, X = 'yes'; NC == 0, PC == 0, X = 'neutral').
 
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
 /*******************************************************************************
 Dose Rate
 *******************************************************************************/
+
+/*
+* Functor: dose_rate_multiplier Star Notation
+* Purpose: To calculate the appropriate drug does based on gene 'and' clearance rate
+* Use with: Star Notation for Allele's (Not Unique Across All Genes)
+* Sample Input Output:
+* Input: dose_rate_multiplier(omeprazole,'CYP2C19', '*1*2', X).
+* Output:
+* Rate = 0.627
+*/
+
 dose_rate_multiplier(Drug, Gene, Allele, Rate):-
   association(Gene, Allele, Drug, _, X, 'clearance', _),
   Rate is 1 * (1 + X).
+
+/*
+* Functor: listcondition
+* Purpose: To show the conditions associated with a certain drug and a specific gene with Star Notation or RsN Allele
+* Use with: Star Notation or RsN for Allele's
+* Sample Input Output:
+* Input: listcondition(venlafaxine, 'CYP2D9', '*3', Condition).
+* Output:Condition = depression 
+*/
+
+listcondition(Drug, Gene, Allele, Condition):-
+  association(Gene, Allele, Drug, _, X, _, Condition).
