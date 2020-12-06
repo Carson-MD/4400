@@ -1,4 +1,4 @@
-# University of Windsor Principles of Programming Languages
+# University of Windsor - Principles of Programming Languages
 
 ## Analyzing Drug-Gene Interactions Using Prolog
 
