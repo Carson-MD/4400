@@ -1,45 +1,8 @@
 /******************************************************************************
 COMP 4400 - PROJECT
-NAMES: Carson Dickie | Ahmed Shafeek
-DATE: 2020-10-25
-
-FORMAT:
-association(variant, drug, pubID, adjective (inc-dec), 'attribute').
-
-BRAINSTORM:
-bestMed(Allele, condition, Med, pubId):- treats(Med, condition),positivelyassociation(Allele, Med, pubId).
-wrst_Med(Allele, condition, Med, pubId):- treats(Med, condition),negativelyassociation(Allele, Med, pubId).
-association(Allele, Med, pubId, IncDec, Param).
-
-HOW TO USE (SO FAR):
-
-1) Check if drug is in the database:
-drug(amitriptyline).
->>return TRUE.
-drug(X).
->>return all drugs in the database.
-
-2) Check if condition is in the database:
-condition(Depression).
->>return TRUE.
-condition(X).
->>return all conditions in the database.
-
-3) Check for associations:
-FORMAT
-association(gene_variant, drug, pubmed_ID, +_-, details).
-gene_variant - the gene variant of interest
-drug - the drug of interest
-pubmed_ID - the pubmed ID for the paper in which the association was identified
-+_- - the direction of the association
-details - the details of the association
-EXAMPLE
-association('CYP2C19', '*1/*2', amitriptyline, X, Y, Z).
->>X = 15590749
-  Y = +
-  Z = 'concentration'
-  ...(plus additional matches)
-*******************************************************************************/
+NAMES: Lama Khalil |Carson Dickie | Ahmed Shafeek
+DATE: 2020-12-06
+******************************************************************************/
 
 /*******************************************************************************
 ********************************************************************************
@@ -565,7 +528,7 @@ Effects and Recommendations
 
 /*
 * Functor: list_effects RsN
-* Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN
+* Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN Allele
 * Use with: RS Numbers (Unique Across All Genes) 
 * Sample Inputoutput:
 * Input: list_effects(venlafaxine, rs12720067T, PM, NM).
@@ -579,8 +542,8 @@ list_effects(Drug, RsN, PM, NM):-
   findall((ID, N), (negative_effect(N), association(_, RsN, Drug, ID, 1, N, _)), NM).
 
 /*
-* Functor: list_effects  Star Notation
-* Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele
+* Functor: list_effects Star Notation
+* Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Star Notation Allele
 * Use with: Star Notation for Allele's (Not Unique Across All Genes) 
 * Sample Inputoutput:
 * Input: list_effects(warfarin,'CYP2C9', '*1/*2', PM, NM).
@@ -597,7 +560,7 @@ list_effects(Drug, Gene, Allele, PM, NM):-
 
 /*
 * Functor: effect_score RsN
-* Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN
+* Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN Allele
 * Use with: RS Numbers (Unique Across All Genes) 
 * Sample Inputoutput:
 * Input: effect_score(venlafaxine, rs4680GG, PC, NC).
@@ -610,8 +573,8 @@ effect_score(Drug, RsN, PC, NC):-
   list_effects(Drug, RsN, PM, NM), length(PM, PC), length(NM, NC).
 
 /* 
-*Functor: effect_score  Star Notation
-* Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele
+*Functor: effect_score Star Notation
+* Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Star Notation Allele
 * Use with: Star Notation 'for' Allele's (Not Unique Across All Genes) 
 * Sample Inputoutput:
 * Input: effect_score(venlafaxine,'CYP2D9', '*3', PC, NC).
@@ -626,7 +589,7 @@ effect_score(Drug, Gene, Allele, PC, NC):-
 
 /*
 * Functor: recommendation RsN
-* Purpose: To recommend certain medication based on the positive and negative effects ratio for a specific gene with RsN
+* Purpose: To recommend certain medication based on the positive and negative effects ratio for a specific gene with RsN Allele
 * Use with: RS Numbers (Unique Across All Genes) 
 * Sample Inputoutput:
 * Input: recommendation(venlafaxine, rs4680GG, X).
@@ -641,7 +604,7 @@ recommendation(Drug, RsN, X):-
 
 /*
 * Functor: recommendation Star Notation
-* Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Allele
+* Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Star Notation Allele
 * Use with: Star Notation for Allele's (Not Unique Across All Genes)
 * Sample Inputoutput:
 * Input: recommendation(venlafaxine,'CYP2D9', '*3', X).
@@ -659,7 +622,7 @@ Dose Rate
 
 /*
 * Functor: dose_rate_multiplier Star Notation
-* Purpose: To calculate the appropriate drug does based on gene and clearance rate
+* Purpose: To calculate the appropriate drug does based on gene 'and' clearance rate
 * Use with: Star Notation for Allele's (Not Unique Across All Genes)
 * Sample Inputoutput:
 * Input: dose_rate_multiplier(omeprazole,'CYP2C19', '*1*2', X).
@@ -673,13 +636,11 @@ dose_rate_multiplier(Drug, Gene, Allele, Rate):-
 
 /*
 * Functor: listcondition
-* Purpose: To show the conditions associated with a certain drug and a specific gene with Allele
+* Purpose: To show the conditions associated with a certain drug and a specific gene with Star Notation or RsN Allele
 * Use with: Star Notation or RsN for Allele's
 * Sample Inputoutput:
 * Input: listcondition(venlafaxine, 'CYP2D9', '*3', Condition).
-* Output:Condition = depression ? ;
-* Input: istcondition(venlafaxine, 'SLC6A4', 'rs25531TT', Condition).
-* Output: Condition = anxiety ? 
+* Output:Condition = depression 
 */
 
 listcondition(Drug, Gene, Allele, Condition):-
