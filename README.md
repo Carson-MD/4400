@@ -67,7 +67,8 @@ association(A< B, C, D, E, F, G).
 
 ### Rules
 
-**1) List the all effects associatied with a given gene-drug combination**
+**1) <<list_efects()>>List the all effects associatied with a given gene-drug combination**
+
 Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN<br />
 Use with: RS Numbers (Unique Across All Genes) <br />
 Sample Inputoutput:<br />
