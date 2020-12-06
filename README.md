@@ -2,6 +2,14 @@
 
 VERSION: GNU Prolog (version gprolog-1.4.5)
 
+## Purpose
+
+This database was designed to analyze the relationships between genes and drugs. Currently functionality includes listing the drugs, genes, conditions, and effects found in the database. Users can also use the database to determine whether or not a given drug is well suited to a patient with a known set of alleles (assuming there is information on those drug-gene associations in the database). The database also allows for the user to determine how to adjust dosing regimens based on a set of alleles, for a small subset of medications.
+
+## TO-DO
+
+Populate the database with gene association data for additional drugs. Work on quantifying all relationships (currently many are simply given as positive or negative). Develop additional rules / algorithms for analyzing and drawing conclusions from the data.
+
 ## Instructions for Use
 
 ### Facts
