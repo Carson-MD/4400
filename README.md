@@ -1,17 +1,12 @@
-# 4400
- Prolog - Gene & Drug Interactions (Temporary Documentation)
+# 4400 PROJECT: Analyzing Drug-Gene Interactions Using Prolog
+
 
 FORMAT:
 associated(variant, drug, pubID, adjective (inc-dec), 'attribute').
 
-BRAINSTORM:
-bestMed(Allele, condition, Med, pubId):- treats(Med, condition),positivelyassociated(Allele, Med, pubId).
-wrstMed(Allele, condition, Med, pubId):- treats(Med, condition),negativelyassociated(Allele, Med, pubId).
-associated(Allele, Med, pubId, IncDec, Param).
-
 HOW TO USE (SO FAR):
 
-1) Check if drug is in the database:
+Check if drug is in the database:
 drug(amitriptyline).
 >>return TRUE.
 drug(X).
@@ -37,4 +32,3 @@ associated('CYP2C19*1/*2', amitriptyline, X, Y, Z).
   Y = increased
   Z = 'concentration vs CYP2C19*1/*1'
   ...(plus additional matches)
- 
