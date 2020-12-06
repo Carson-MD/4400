@@ -1,36 +1,64 @@
 # 4400 PROJECT: Analyzing Drug-Gene Interactions Using Prolog
 
-
-FORMAT:
-associated(variant, drug, pubID, adjective (inc-dec), 'attribute').
+VERSION: GNU Prolog (version gprolog-1.4.5)
 
 HOW TO USE (SO FAR):
 
-**Check if drug is in the database:**
+**1) Check if drug is in the database:**
 
 drug(amitriptyline).
->>return TRUE.
+>>TRUE.
 
 drug(X).
 >>return all drugs in the database.
 
-2) Check if condition is in the database:
-condition(Depression).
->>return TRUE.
+**2) Check if condition is in the database:**
+
+condition('Depression').
+>>TRUE.
+
 condition(X).
 >>return all conditions in the database.
 
-3) Check for associations:
-FORMAT
-associated(gene_variant, drug, pubmed_ID, increased_decreased, details).
-gene_variant - the gene variant of interest
-drug - the drug of interest
-pubmed_ID - the pubmed ID for the paper in which the association was identified
-increased_decreased - the direction of the association
-details - the details of the association
-EXAMPLE
-associated('CYP2C19*1/*2', amitriptyline, X, Y, Z).
->>X = 15590749
-  Y = increased
-  Z = 'concentration vs CYP2C19*1/*1'
-  ...(plus additional matches)
+**3) Check if a gene is in the database:**
+
+gene('CYP2D9').
+>>TRUE
+
+gene(X).
+>>return all genes in the database.
+
+**4) Check if an effect is in the database:**
+
+effect('clearance').
+>>TRUE
+
+effect(X).
+>>return all effects.
+
+positive_effect(X).
+>>return all positive effects.
+
+negative_effect(X).
+>>return all negative effects
+
+
+**5) Check the database for associations:**
+association('GENE','ALLELE','DRUG','PMID','MAG/DIR','EFFECT','GROUP').
+
+GENE – the name of the gene (example: MDR1).<br />
+ALLELE – the genetic variant, given as either an RsID or in “star” nomenclature.<br />
+DRUG – The chemical compound identified in the association (example: Amitriptyline).<br />
+PUBMED ID – A unique number identifying the paper in which the association was published.<br />
+MAGNITUDE/DIRECTION – The magnitude and direction of the association. If the magnitude was not given, then it is recorded as 1 (representing an increase) or -1 (representing a decrease).<br />
+EFFECT – The effect of the association (example: clearance).<br />
+POPULATION UNDER STUDY – The group of people in which the association was identified (example: depression).<br />
+
+Parameters that are filled out will be matched exactly, parameters that are to remain variable should be marked with a capital letter.
+
+Examples:<br />
+association('MDR1', 'rs2235067T', amitriptyline, 18215618, 1, 'remission', 'depression').
+>>TRUE.
+
+association(A< B, C, D, E, F, G).
+>>return all associations.
