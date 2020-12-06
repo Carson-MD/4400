@@ -530,7 +530,7 @@ Effects and Recommendations
 * Functor: list_effects RsN
 * Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN Allele
 * Use with: RS Numbers (Unique Across All Genes) 
-* Sample Inputoutput:
+* Sample Input Output:
 * Input: list_effects(venlafaxine, rs12720067T, PM, NM).
 * Output:
 * NM = []
@@ -545,7 +545,7 @@ list_effects(Drug, RsN, PM, NM):-
 * Functor: list_effects Star Notation
 * Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Star Notation Allele
 * Use with: Star Notation for Allele's (Not Unique Across All Genes) 
-* Sample Inputoutput:
+* Sample Input Output:
 * Input: list_effects(warfarin,'CYP2C9', '*1/*2', PM, NM).
 * Output:
 * NM = [(15590749,concentration),(12172336,concentration),(28296334,concentration),(20531370,concentration),(12012142,concentration)]
@@ -562,7 +562,7 @@ list_effects(Drug, Gene, Allele, PM, NM):-
 * Functor: effect_score RsN
 * Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN Allele
 * Use with: RS Numbers (Unique Across All Genes) 
-* Sample Inputoutput:
+* Sample Input Output:
 * Input: effect_score(venlafaxine, rs4680GG, PC, NC).
 * Output:
 * NC = 0
@@ -576,7 +576,7 @@ effect_score(Drug, RsN, PC, NC):-
 *Functor: effect_score Star Notation
 * Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Star Notation Allele
 * Use with: Star Notation 'for' Allele's (Not Unique Across All Genes) 
-* Sample Inputoutput:
+* Sample Input Output:
 * Input: effect_score(venlafaxine,'CYP2D9', '*3', PC, NC).
 * Output:
 * NC = 1
@@ -591,7 +591,7 @@ effect_score(Drug, Gene, Allele, PC, NC):-
 * Functor: recommendation RsN
 * Purpose: To recommend certain medication based on the positive and negative effects ratio for a specific gene with RsN Allele
 * Use with: RS Numbers (Unique Across All Genes) 
-* Sample Inputoutput:
+* Sample Input Output:
 * Input: recommendation(venlafaxine, rs4680GG, X).
 * Output:
 * X = yes
@@ -606,7 +606,7 @@ recommendation(Drug, RsN, X):-
 * Functor: recommendation Star Notation
 * Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Star Notation Allele
 * Use with: Star Notation for Allele's (Not Unique Across All Genes)
-* Sample Inputoutput:
+* Sample Input Output:
 * Input: recommendation(venlafaxine,'CYP2D9', '*3', X).
 * Output:
 * X = no
@@ -624,7 +624,7 @@ Dose Rate
 * Functor: dose_rate_multiplier Star Notation
 * Purpose: To calculate the appropriate drug does based on gene 'and' clearance rate
 * Use with: Star Notation for Allele's (Not Unique Across All Genes)
-* Sample Inputoutput:
+* Sample Input Output:
 * Input: dose_rate_multiplier(omeprazole,'CYP2C19', '*1*2', X).
 * Output:
 * Rate = 0.627
@@ -638,7 +638,7 @@ dose_rate_multiplier(Drug, Gene, Allele, Rate):-
 * Functor: listcondition
 * Purpose: To show the conditions associated with a certain drug and a specific gene with Star Notation or RsN Allele
 * Use with: Star Notation or RsN for Allele's
-* Sample Inputoutput:
+* Sample Input Output:
 * Input: listcondition(venlafaxine, 'CYP2D9', '*3', Condition).
 * Output:Condition = depression 
 */
