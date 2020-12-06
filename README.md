@@ -68,7 +68,7 @@ association(A< B, C, D, E, F, G).
 ### Rules
 
 **1) <<list_efects()>>List the all effects associatied with a given gene-drug combination**
-
+*VERSION 1*<br />
 Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN<br />
 Use with: RS Numbers (Unique Across All Genes) <br />
 Sample Inputoutput:<br />
@@ -76,3 +76,12 @@ Input: list_effects(venlafaxine, rs12720067T, PM, NM).<br />
 Output:<br />
 NM = []<br />
 PM = [(18215618,remission)]<br />
+
+*VERSION 2* <br />
+Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele<br />
+Use with: Star Notation for Allele's (Not Unique Across All Genes) <br />
+Sample Inputoutput:<br />
+nput: list_effects(warfarin,'CYP2C9', '*1/*2', PM, NM).<br />
+Output:<br />
+NM = [(15590749,concentration),(12172336,concentration),(28296334,concentration),(20531370,concentration),(12012142,concentration)]<br />
+PM = []<br />
