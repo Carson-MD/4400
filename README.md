@@ -1,4 +1,4 @@
-# 4400 PROJECT:
+University of Windsor Principles of Programming Languages
 
 ## Analyzing Drug-Gene Interactions Using Prolog
 
