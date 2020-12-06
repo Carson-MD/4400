@@ -1,18 +1,20 @@
-# 4400 PROJECT: Analyzing Drug-Gene Interactions Using Prolog
+# 4400 PROJECT:
+
+## Analyzing Drug-Gene Interactions Using Prolog
 
 VERSION: GNU Prolog (version gprolog-1.4.5)
 
-## Purpose
+### Purpose
 
 This database was designed to analyze the relationships between genes and drugs. Currently functionality includes listing the drugs, genes, conditions, and effects found in the database. Users can also use the database to determine whether or not a given drug is well suited to a patient with a known set of alleles (assuming there is information on those drug-gene associations in the database). The database also allows for the user to determine how to adjust dosing regimens based on a set of alleles, for a small subset of medications.
 
-## TO-DO
+### TO-DO
 
 Populate the database with gene association data for additional drugs. Work on quantifying all relationships (currently many are simply given as positive or negative). Develop additional rules / algorithms for analyzing and drawing conclusions from the data.
 
-## Instructions for Use
+### Instructions for Use
 
-### Facts
+#### Facts
 
 **1) Check if drug is in the database:**
 
@@ -73,7 +75,7 @@ association('MDR1', 'rs2235067T', amitriptyline, 18215618, 1, 'remission', 'depr
 association(A< B, C, D, E, F, G).
 >>return all associations.
 
-### Rules
+#### Rules
 
 **1) <<list_efects()>>List the all effects associatied with a given gene-drug combination**
 
