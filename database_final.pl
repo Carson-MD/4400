@@ -183,9 +183,11 @@ negative_effect('toxicity').
 * ASSOCIATIONS *
 ****************/
 
-/*******************************************************************************
+/*****************************************************************************************
 amitritypline
-*******************************************************************************/
+******************************************************************************************
+            *Gene*     *Allele*  *Drug*        *PubMid*  *%*   *effect*      *concentration*
+******************************************************************************************/
 association('CYP2C19', '*1/*2', amitriptyline, 15590749, 1, 'concentration', 'NA').
 association('CYP2C19', '*2/*2', amitriptyline, 15590749, 1, 'concentration', 'NA').
 
@@ -561,38 +563,110 @@ association('CYP2D9', '*4', zuclopenthixol, 12197620, -1, 'metabolism', 'NA').
 Effects and Recommendations
 *******************************************************************************/
 
-/*Use With RS Numbers (Unique Across All Genes)*/
+/*
+* Functor: list_effects RsN
+* Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN
+* Use with: RS Numbers (Unique Across All Genes) 
+* Sample Inputoutput:
+* Input: list_effects(venlafaxine, rs12720067T, PM, NM).
+* Output:
+* NM = []
+* PM = [(18215618,remission)]
+*/
+
 list_effects(Drug, RsN, PM, NM):-
   findall((ID, P), (positive_effect(P), association(_, RsN, Drug, ID, 1, P, _)), PM),
   findall((ID, N), (negative_effect(N), association(_, RsN, Drug, ID, 1, N, _)), NM).
 
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+/*
+* Functor: list_effects Allele
+* Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele
+* Use with: Star Notation for Allele's (Not Unique Across All Genes) 
+* Sample Inputoutput:
+* Input: list_effects(warfarin,'CYP2C9', '*1/*2', PM, NM).
+* Output:
+* NM = [(15590749,concentration),(12172336,concentration),(28296334,concentration),(20531370,concentration),(12012142,concentration)]
+* PM = []
+*/
+
 list_effects(Drug, Gene, Allele, PM, NM):-
   findall((ID, P), (positive_effect(P), association(Gene, Allele, Drug, ID, 1, P, _)), PM),
   findall((ID, N), (negative_effect(N), association(Gene, Allele, Drug, ID, 1, N, _)), NM).
 
-/*Use With RS Numbers (Unique Across All Genes)*/
+
+
+/*
+* Functor: effect_score RsN
+* Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN
+* Use with: RS Numbers (Unique Across All Genes) 
+* Sample Inputoutput:
+* Input: effect_score(venlafaxine, rs4680GG, PC, NC).
+* Output:
+* NC = 0
+* PC = 1
+*/
+
 effect_score(Drug, RsN, PC, NC):-
   list_effects(Drug, RsN, PM, NM), length(PM, PC), length(NM, NC).
 
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+/* 
+*Functor: effect_score Allele
+* Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele
+* Use with: Star Notation 'for' Allele's (Not Unique Across All Genes) 
+* Sample Inputoutput:
+* Input: effect_score(venlafaxine,'CYP2D9', '*3', PC, NC).
+* Output:
+* NC = 1
+* PC = 0
+*/
+
 effect_score(Drug, Gene, Allele, PC, NC):-
   list_effects(Drug, Gene, Allele, PM, NM), length(PM, PC), length(NM, NC).
+  
 
-/*Use With RS Numbers (Unique Across All Genes)*/
+/*
+* Functor: recommendation RsN
+* Purpose: To recommend certain medication based on the positive and negative effects ratio for a specific gene with RsN
+* Use with: RS Numbers (Unique Across All Genes) 
+* Sample Inputoutput:
+* Input: recommendation(venlafaxine, rs4680GG, X).
+* Output:
+* X = yes
+*/
+
 recommendation(Drug, RsN, X):-
   effect_score(Drug, RsN, PC, NC),
   (NC > 0, X = 'no'; PC > 0, X = 'yes'; NC == 0, PC == 0, X = 'neutral').
 
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
+
+/*
+* Functor: recommendation Allele
+* Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Allele
+* Use with: Star Notation for Allele's (Not Unique Across All Genes)
+* Sample Inputoutput:
+* Input: recommendation(venlafaxine,'CYP2D9', '*3', X).
+* Output:
+* X = no
+*/
+
 recommendation(Drug, Gene, Allele, X):-
   effect_score(Drug, Gene, Allele, PC, NC),
   (NC > 0, X = 'no'; PC > 0, X = 'yes'; NC == 0, PC == 0, X = 'neutral').
 
-/*Use with Star Notation for Allele's (Not Unique Across All Genes)*/
 /*******************************************************************************
 Dose Rate
 *******************************************************************************/
+
+/*
+* Functor: dose_rate_multiplier Allele
+* Purpose: To calculate the appropriate drug does based on gene and clearance rate
+* Use with: Star Notation for Allele's (Not Unique Across All Genes)
+* Sample Inputoutput:
+* Input: dose_rate_multiplier(omeprazole,'CYP2C19', '*1*2', X).
+* Output:
+* Rate = 0.627
+*/
+
 dose_rate_multiplier(Drug, Gene, Allele, Rate):-
   association(Gene, Allele, Drug, _, X, 'clearance', _),
   Rate is 1 * (1 + X).
