@@ -67,4 +67,11 @@ association(A< B, C, D, E, F, G).
 
 ### Rules
 
-**1) adf**
+**1) List the all effects associatied with a given gene-drug combination**
+Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN<br />
+Use with: RS Numbers (Unique Across All Genes) <br />
+Sample Inputoutput:<br />
+Input: list_effects(venlafaxine, rs12720067T, PM, NM).<br />
+Output:<br />
+NM = []<br />
+PM = [(18215618,remission)]<br />
