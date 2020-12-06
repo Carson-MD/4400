@@ -16,21 +16,21 @@ Populate the database with gene association data for additional drugs. Work on q
 
 #### Facts
 
-**1) Check if drug is in the database:**
+**1) Check if a drug is in the database:**
 
 drug(amitriptyline).
 >>TRUE.
 
 drug(X).
->>return all drugs in the database.
+>>returns all drugs in the database.
 
-**2) Check if condition is in the database:**
+**2) Check if a condition is in the database:**
 
 condition('Depression').
 >>TRUE.
 
 condition(X).
->>return all conditions in the database.
+>>returns all conditions in the database.
 
 **3) Check if a gene is in the database:**
 
@@ -38,7 +38,7 @@ gene('CYP2D9').
 >>TRUE
 
 gene(X).
->>return all genes in the database.
+>>returns all genes in the database.
 
 **4) Check if an effect is in the database:**
 
@@ -46,13 +46,13 @@ effect('clearance').
 >>TRUE
 
 effect(X).
->>return all effects.
+>>returns all effects in the database.
 
 positive_effect(X).
->>return all positive effects.
+>>returns all positive effects.
 
 negative_effect(X).
->>return all negative effects
+>>returns all negative effects
 
 
 **5) Check the database for associations:**
@@ -77,10 +77,10 @@ association(A< B, C, D, E, F, G).
 
 #### Rules
 
-**1) <<list_efects()>>List the all effects associatied with a given gene-drug combination**
+**1) <<list_efects()>>List all effects associatied with a given gene-drug combination**
 
 *VERSION 1*<br />
-Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN<br />
+Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN Allele<br />
 Use with: RS Numbers (Unique Across All Genes) <br />
 Sample Input / Output:<br />
 Input: list_effects(venlafaxine, rs12720067T, PM, NM).<br />
@@ -89,7 +89,7 @@ NM = []<br />
 PM = [(18215618,remission)]
 
 *VERSION 2* <br />
-Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele<br />
+Purpose: To list the positive matches (PM) and negative matches (NM) based on a given drug & gene with Star Notatio Allele<br />
 Use with: Star Notation for Allele's (Not Unique Across All Genes) <br />
 Sample Input / Output:<br />
 nput: list_effects(warfarin,'CYP2C9', '*1/*2', PM, NM).<br />
@@ -101,7 +101,7 @@ PM = []
 
 *VERSION 1*<br />
 
-Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN<br />
+Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with RsN Allele<br />
 Use with: RS Numbers (Unique Across All Genes) <br />
 Sample Input / Output:<br />
 Input: effect_score(venlafaxine, rs4680GG, PC, NC).<br />
@@ -111,7 +111,7 @@ PC = 1
 
 *VERSION 2*<br />
 
-Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Allele<br />
+Purpose: To count the list of positive matches (PM) and negative matches (NM) based on a given drug & gene with Star Notatio Allele<br />
 Use with: Star Notation 'for' Allele's (Not Unique Across All Genes) <br />
 Sample Input / Output:<br />
 Input: effect_score(venlafaxine,'CYP2D9', '*3', PC, NC).<br />
@@ -121,7 +121,7 @@ PC = 0
 
 **3) <<recommendation()>>Give a recommendation regarding a gene-drug combination (based on positive and negative associations).**
 
-Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Allele<br />
+Purpose: To recommend certain medication based on the positive 'and' negative effects ratio 'for' a specific gene with Star Notatio Allele<br />
 Use with: Star Notation for Allele's (Not Unique Across All Genes)<br />
 Sample Input / Output:<br />
 Input: recommendation(venlafaxine,'CYP2D9', '*3', X).<br />
@@ -130,7 +130,7 @@ X = no
 
 **4) <<list_condition()>>List all conditions associated with a drug-gene combination.**
 
-Purpose: To show the conditions associated with a certain drug and a specific gene with Allele<br />
+Purpose: To show the conditions associated with a certain drug and a specific gene with Star Notation or RsN Allele<br />
 Use with: Star Notation or RsN for Allele's<br />
 Sample Input / Output:<br />
 Input: list_condition(venlafaxine, 'CYP2D9', '*3', Condition).<br />
